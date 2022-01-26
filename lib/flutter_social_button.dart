@@ -5,7 +5,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class SocialButton{
 
-  Widget facebookButton({required VoidCallback onTap, String title = "Login With Facebook",}) {
+ static Widget facebookButton({required VoidCallback onTap, String title = "Login With Facebook",}) {
     return InkWell(
       onTap: onTap,
       child: Container(
@@ -34,7 +34,7 @@ class SocialButton{
     );
   }
 
-  Widget googleButton({required VoidCallback onTap, String title = "Login With Google",}) {
+ static Widget googleButton({required VoidCallback onTap, String title = "Login With Google",}) {
     return InkWell(
       onTap: onTap,
       child: Container(
@@ -63,7 +63,7 @@ class SocialButton{
     );
   }
 
-  Widget twitterButton({required VoidCallback onTap, String title = "Login With Twitter",}) {
+ static Widget twitterButton({required VoidCallback onTap, String title = "Login With Twitter",}) {
     return InkWell(
       onTap: onTap,
       child: Container(
@@ -92,7 +92,7 @@ class SocialButton{
     );
   }
 
-  Widget whatsappButton({required VoidCallback onTap, String title = "Login With WhatsApp",}) {
+ static Widget whatsappButton({required VoidCallback onTap, String title = "Login With WhatsApp",}) {
     return InkWell(
       onTap: onTap,
       child: Container(
@@ -121,7 +121,7 @@ class SocialButton{
     );
   }
 
-  Widget linkedinButton({required VoidCallback onTap, String title = "Login With Linkedin",}) {
+ static Widget linkedinButton({required VoidCallback onTap, String title = "Login With Linkedin",}) {
     return InkWell(
       onTap: onTap,
       child: Container(
@@ -150,7 +150,7 @@ class SocialButton{
     );
   }
 
-  Widget githubButton({required VoidCallback onTap, String title = "Login With Github",}) {
+ static Widget githubButton({required VoidCallback onTap, String title = "Login With Github",}) {
     return InkWell(
       onTap: onTap,
       child: Container(
@@ -179,7 +179,7 @@ class SocialButton{
     );
   }
 
-  Widget facebookButtonCircle({required VoidCallback onTap}) {
+ static Widget facebookButtonCircle({required VoidCallback onTap}) {
     return ElevatedButton(onPressed: onTap,
       child: const Icon(FontAwesomeIcons.facebook),
       style: ElevatedButton.styleFrom(
@@ -189,7 +189,7 @@ class SocialButton{
       ),);
   }
 
-  Widget googleButtonCircle({required VoidCallback onTap}) {
+ static Widget googleButtonCircle({required VoidCallback onTap}) {
     return ElevatedButton(onPressed: onTap,
       child: const Icon(FontAwesomeIcons.google),
       style: ElevatedButton.styleFrom(
@@ -199,7 +199,7 @@ class SocialButton{
       ),);
   }
 
-  Widget twitterButtonCircle({required VoidCallback onTap}) {
+ static Widget twitterButtonCircle({required VoidCallback onTap}) {
     return ElevatedButton(onPressed: onTap,
       child: const Icon(FontAwesomeIcons.twitter),
       style: ElevatedButton.styleFrom(
@@ -209,7 +209,7 @@ class SocialButton{
       ),);
   }
 
-  Widget whatsappButtonCircle({required VoidCallback onTap}) {
+ static Widget whatsappButtonCircle({required VoidCallback onTap}) {
     return ElevatedButton(onPressed: onTap,
       child: const Icon(FontAwesomeIcons.whatsapp),
       style: ElevatedButton.styleFrom(
@@ -219,7 +219,7 @@ class SocialButton{
       ),);
   }
 
-  Widget linkedinButtonCircle({required VoidCallback onTap}) {
+ static Widget linkedinButtonCircle({required VoidCallback onTap}) {
     return ElevatedButton(onPressed: onTap,
       child: const Icon(FontAwesomeIcons.linkedin),
       style: ElevatedButton.styleFrom(
@@ -229,7 +229,7 @@ class SocialButton{
       ),);
   }
 
-  Widget githubButtonCircle({required VoidCallback onTap}) {
+ static Widget githubButtonCircle({required VoidCallback onTap}) {
     return ElevatedButton(onPressed: onTap,
       child: const Icon(FontAwesomeIcons.github),
       style: ElevatedButton.styleFrom(
