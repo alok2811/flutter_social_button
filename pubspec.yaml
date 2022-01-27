@@ -1,7 +1,7 @@
 name: flutter_social_button
 description: A new Flutter project.
-version: 0.0.1
-homepage: https://github.com/alok2811/flutter_social_button
+version: 0.0.2
+homepage: https://github.com/alok2811/flutter_social_button/
 
 environment:
   sdk: ">=2.15.1 <3.0.0"
