@@ -17,18 +17,18 @@ class HomePage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               SocialButton.facebookButton(onTap: (){}),
-              const SizedBox(height: 5,),
+              const SizedBox(height: 2,),
               SocialButton.googleButton(onTap: (){}),
-              const SizedBox(height: 5,),
-              SocialButton.linkedinButton(onTap: (){}),
-              const SizedBox(height: 5,),
-              SocialButton.twitterButton(onTap: (){}),
-              const SizedBox(height: 5,),
-              SocialButton.whatsappButton(onTap: (){}),
-              const SizedBox(height: 5,),
-              SocialButton.githubButton(onTap: (){}),
 
-              const SizedBox(height: 5,),
+              const SizedBox(height: 2,),
+              SocialButton.whatsappButton(onTap: (){}),
+              const SizedBox(height: 2,),
+              SocialButton.githubButton(onTap: (){}),
+              const SizedBox(height: 2,),
+              SocialButton.phoneButton(onTap: (){}),
+
+              const Divider(color: Colors.black, thickness: 2.5,),
+
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
@@ -38,11 +38,9 @@ class HomePage extends StatelessWidget {
                   SocialButton.linkedinButtonCircle(onTap: (){}),
                   SocialButton.whatsappButtonCircle(onTap: (){}),
                   SocialButton.githubButtonCircle(onTap: (){}),
+                  SocialButton.phoneButtonCircle(onTap: (){}),
                 ],
               )
-
-
-
             ],
           ),
         ),

@@ -5,237 +5,208 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class SocialButton{
 
- static Widget facebookButton({required VoidCallback onTap, String title = "Login With Facebook",}) {
-    return InkWell(
-      onTap: onTap,
-      child: Container(
-        height: 50,
-        margin: const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
-        decoration: const BoxDecoration(
-            color: facebookColor, borderRadius: BorderRadius.all(Radius.circular(10))),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Icon(
-              FontAwesomeIcons.facebook,
-              color: Colors.white,
-            ),
-            Container(
-              margin: const EdgeInsets.only(left: 20),
-              child: Text(title,
-                  style: const TextStyle(
-                      color: Colors.white,
-                      fontSize: 18,
-                      fontWeight: FontWeight.w400)),
-            ),
-          ],
+ static Widget facebookButton({required VoidCallback onTap, String title = "Login With Facebook",Color backgroundColor = facebookColor, Color iconColor= Colors.white}) {
+    return Container(
+      padding: const EdgeInsets.all(20.0),
+      width: double.infinity,
+      child: ElevatedButton.icon(
+          onPressed: onTap,
+          icon:  Icon(FontAwesomeIcons.facebookF, color: iconColor,),
+          label: Text(title),
+        style: ElevatedButton.styleFrom(
+          padding: const EdgeInsets.all(20),
+          primary: backgroundColor,
+          shape:   RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(12), // <-- Radius
+          ),
         ),
       ),
     );
   }
 
- static Widget googleButton({required VoidCallback onTap, String title = "Login With Google",}) {
-    return InkWell(
-      onTap: onTap,
-      child: Container(
-        height: 50,
-        margin: const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
-        decoration: const BoxDecoration(
-            color: googleColor, borderRadius: BorderRadius.all(Radius.circular(10))),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Icon(
-              FontAwesomeIcons.google,
-              color: Colors.white,
-            ),
-            Container(
-              margin: const EdgeInsets.only(left: 20),
-              child: Text(title,
-                  style: const TextStyle(
-                      color: Colors.white,
-                      fontSize: 18,
-                      fontWeight: FontWeight.w400)),
-            ),
-          ],
+ static Widget googleButton({required VoidCallback onTap, String title = "Login With Google",Color backgroundColor = googleColor, Color iconColor= Colors.white}) {
+    return Container(
+      padding: const EdgeInsets.all(20.0),
+      width: double.infinity,
+      child: ElevatedButton.icon(
+        onPressed: onTap,
+        icon:  Icon(FontAwesomeIcons.google, color: iconColor,),
+        label: Text(title),
+        style: ElevatedButton.styleFrom(
+          padding: const EdgeInsets.all(20),
+          primary: backgroundColor,
+          shape:   RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(12), // <-- Radius
+          ),
         ),
       ),
     );
   }
 
- static Widget twitterButton({required VoidCallback onTap, String title = "Login With Twitter",}) {
-    return InkWell(
-      onTap: onTap,
-      child: Container(
-        height: 50,
-        margin: const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
-        decoration: const BoxDecoration(
-            color: twitterColor, borderRadius: BorderRadius.all(Radius.circular(10))),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Icon(
-              FontAwesomeIcons.twitter,
-              color: Colors.white,
-            ),
-            Container(
-              margin: const EdgeInsets.only(left: 20),
-              child: Text(title,
-                  style: const TextStyle(
-                      color: Colors.white,
-                      fontSize: 18,
-                      fontWeight: FontWeight.w400)),
-            ),
-          ],
+ static Widget twitterButton({required VoidCallback onTap, String title = "Login With Twitter",Color backgroundColor = twitterColor, Color iconColor= Colors.white}) {
+    return Container(
+      padding: const EdgeInsets.all(20.0),
+      width: double.infinity,
+      child: ElevatedButton.icon(
+        onPressed: onTap,
+        icon:  Icon(FontAwesomeIcons.twitter, color: iconColor,),
+        label: Text(title),
+        style: ElevatedButton.styleFrom(
+          padding: const EdgeInsets.all(20),
+          primary: backgroundColor,
+          shape:   RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(12), // <-- Radius
+          ),
         ),
       ),
     );
   }
 
- static Widget whatsappButton({required VoidCallback onTap, String title = "Login With WhatsApp",}) {
-    return InkWell(
-      onTap: onTap,
-      child: Container(
-        height: 50,
-        margin: const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
-        decoration: const BoxDecoration(
-            color: whatsappColor, borderRadius: BorderRadius.all(Radius.circular(10))),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Icon(
-              FontAwesomeIcons.whatsapp,
-              color: Colors.white,
-            ),
-            Container(
-              margin: const EdgeInsets.only(left: 20),
-              child: Text(title,
-                  style: const TextStyle(
-                      color: Colors.white,
-                      fontSize: 18,
-                      fontWeight: FontWeight.w400)),
-            ),
-          ],
+ static Widget whatsappButton({required VoidCallback onTap, String title = "Login With WhatsApp",Color backgroundColor = whatsappColor, Color iconColor= Colors.white}) {
+    return Container(
+      padding: const EdgeInsets.all(20.0),
+      width: double.infinity,
+      child: ElevatedButton.icon(
+        onPressed: onTap,
+        icon:  Icon(FontAwesomeIcons.whatsapp, color: iconColor,),
+        label: Text(title),
+        style: ElevatedButton.styleFrom(
+          padding: const EdgeInsets.all(20),
+          primary: backgroundColor,
+          shape:   RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(12), // <-- Radius
+          ),
         ),
       ),
     );
   }
 
- static Widget linkedinButton({required VoidCallback onTap, String title = "Login With Linkedin",}) {
-    return InkWell(
-      onTap: onTap,
-      child: Container(
-        height: 50,
-        margin: const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
-        decoration: const BoxDecoration(
-            color: linkedinColor, borderRadius: BorderRadius.all(Radius.circular(10))),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Icon(
-              FontAwesomeIcons.linkedin,
-              color: Colors.white,
-            ),
-            Container(
-              margin: const EdgeInsets.only(left: 20),
-              child: Text(title,
-                  style: const TextStyle(
-                      color: Colors.white,
-                      fontSize: 18,
-                      fontWeight: FontWeight.w400)),
-            ),
-          ],
+ static Widget linkedinButton({required VoidCallback onTap, String title = "Login With Linkedin",Color backgroundColor = linkedinColor, Color iconColor= Colors.white}) {
+    return Container(
+      padding: const EdgeInsets.all(20.0),
+      width: double.infinity,
+      child: ElevatedButton.icon(
+        onPressed: onTap,
+        icon:  Icon(FontAwesomeIcons.linkedin, color: iconColor,),
+        label: Text(title),
+        style: ElevatedButton.styleFrom(
+          padding: const EdgeInsets.all(20),
+          primary: backgroundColor,
+          shape:   RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(12), // <-- Radius
+          ),
         ),
       ),
     );
   }
 
- static Widget githubButton({required VoidCallback onTap, String title = "Login With Github",}) {
-    return InkWell(
-      onTap: onTap,
-      child: Container(
-        height: 50,
-        margin: const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
-        decoration: const BoxDecoration(
-            color: githubColor, borderRadius: BorderRadius.all(Radius.circular(10))),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Icon(
-              FontAwesomeIcons.github,
-              color: Colors.white,
-            ),
-            Container(
-              margin: const EdgeInsets.only(left: 20),
-              child: Text(title,
-                  style: const TextStyle(
-                      color: Colors.white,
-                      fontSize: 18,
-                      fontWeight: FontWeight.w400)),
-            ),
-          ],
+ static Widget githubButton({required VoidCallback onTap, String title = "Login With Github",Color backgroundColor = githubColor, Color iconColor= Colors.white}) {
+    return Container(
+      padding: const EdgeInsets.all(20.0),
+      width: double.infinity,
+      child: ElevatedButton.icon(
+        onPressed: onTap,
+        icon:  Icon(FontAwesomeIcons.github,  color: iconColor,),
+        label: Text(title),
+        style: ElevatedButton.styleFrom(
+          padding: const EdgeInsets.all(20),
+          primary: backgroundColor,
+          shape:   RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(12), // <-- Radius
+          ),
         ),
       ),
     );
   }
 
- static Widget facebookButtonCircle({required VoidCallback onTap}) {
+ static Widget phoneButton({required VoidCallback onTap, String title = "Login With Phone",Color backgroundColor = phoneColor, Color iconColor= Colors.white}) {
+    return Container(
+      padding: const EdgeInsets.all(20.0),
+      width: double.infinity,
+      child: ElevatedButton.icon(
+        onPressed: onTap,
+        icon:  Icon(Icons.phone_android, color: iconColor,),
+        label: Text(title),
+        style: ElevatedButton.styleFrom(
+          padding: const EdgeInsets.all(20),
+          primary: backgroundColor,
+          shape:   RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(12), // <-- Radius
+          ),
+        ),
+      ),
+    );
+  }
+
+  // Circle Buttons
+
+ static Widget facebookButtonCircle({required VoidCallback onTap,Color backgroundColor = facebookColor, Color iconColor= Colors.white}) {
     return ElevatedButton(onPressed: onTap,
-      child: const Icon(FontAwesomeIcons.facebook),
+      child: Icon(FontAwesomeIcons.facebookF, color: iconColor,),
       style: ElevatedButton.styleFrom(
         shape: const CircleBorder(),
-        primary: facebookColor,
-        padding: const EdgeInsets.all(16),
+        primary: backgroundColor,
+        padding: const EdgeInsets.all(20),
       ),);
   }
 
- static Widget googleButtonCircle({required VoidCallback onTap}) {
+ static Widget googleButtonCircle({required VoidCallback onTap, Color backgroundColor = googleColor, Color iconColor= Colors.white}) {
     return ElevatedButton(onPressed: onTap,
-      child: const Icon(FontAwesomeIcons.google),
+      child:  Icon(FontAwesomeIcons.google,color: iconColor,),
       style: ElevatedButton.styleFrom(
         shape: const CircleBorder(),
-        primary: googleColor,
-        padding: const EdgeInsets.all(16),
+        primary: backgroundColor,
+        padding: const EdgeInsets.all(20),
       ),);
   }
 
- static Widget twitterButtonCircle({required VoidCallback onTap}) {
+ static Widget twitterButtonCircle({required VoidCallback onTap, Color backgroundColor = twitterColor, Color iconColor= Colors.white}) {
     return ElevatedButton(onPressed: onTap,
-      child: const Icon(FontAwesomeIcons.twitter),
+      child: Icon(FontAwesomeIcons.twitter, color: iconColor,),
       style: ElevatedButton.styleFrom(
         shape: const CircleBorder(),
-        primary: twitterColor,
-        padding: const EdgeInsets.all(16),
+        primary: backgroundColor,
+        padding: const EdgeInsets.all(20),
       ),);
   }
 
- static Widget whatsappButtonCircle({required VoidCallback onTap}) {
+ static Widget whatsappButtonCircle({required VoidCallback onTap, Color backgroundColor = whatsappColor, Color iconColor= Colors.white}) {
     return ElevatedButton(onPressed: onTap,
-      child: const Icon(FontAwesomeIcons.whatsapp),
+      child: Icon(FontAwesomeIcons.whatsapp, color: iconColor ,),
       style: ElevatedButton.styleFrom(
         shape: const CircleBorder(),
-        primary: whatsappColor,
-        padding: const EdgeInsets.all(16),
+        primary: backgroundColor,
+        padding: const EdgeInsets.all(20),
       ),);
   }
 
- static Widget linkedinButtonCircle({required VoidCallback onTap}) {
+ static Widget linkedinButtonCircle({required VoidCallback onTap, Color backgroundColor = linkedinColor, Color iconColor= Colors.white}) {
     return ElevatedButton(onPressed: onTap,
-      child: const Icon(FontAwesomeIcons.linkedin),
+      child: Icon(FontAwesomeIcons.linkedin, color: iconColor,),
       style: ElevatedButton.styleFrom(
         shape: const CircleBorder(),
-        primary: linkedinColor,
-        padding: const EdgeInsets.all(16),
+        primary: backgroundColor,
+        padding: const EdgeInsets.all(20),
       ),);
   }
 
- static Widget githubButtonCircle({required VoidCallback onTap}) {
+ static Widget githubButtonCircle({required VoidCallback onTap, Color backgroundColor = githubColor, Color iconColor= Colors.white}) {
     return ElevatedButton(onPressed: onTap,
-      child: const Icon(FontAwesomeIcons.github),
+      child: Icon(FontAwesomeIcons.github, color: iconColor,),
       style: ElevatedButton.styleFrom(
         shape: const CircleBorder(),
-        primary: githubColor,
-        padding: const EdgeInsets.all(16),
+        primary: backgroundColor,
+        padding: const EdgeInsets.all(20),
+      ),);
+  }
+
+  static Widget phoneButtonCircle({required VoidCallback onTap, Color backgroundColor = phoneColor, Color iconColor= Colors.white}) {
+    return ElevatedButton(onPressed: onTap,
+      child: Icon(Icons.phone_android, color: iconColor,),
+      style: ElevatedButton.styleFrom(
+        shape: const CircleBorder(),
+        primary: backgroundColor,
+        padding: const EdgeInsets.all(20),
       ),);
   }
 
