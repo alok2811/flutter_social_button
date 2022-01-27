@@ -5,7 +5,26 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class SocialButton{
 
- static Widget facebookButton({required VoidCallback onTap, String title = "Login With Facebook",Color backgroundColor = facebookColor, Color iconColor= Colors.white}) {
+ static Widget appleButton({required VoidCallback onTap, String title = "Login With Apple",Color backgroundColor = appleColor, Color iconColor= Colors.white}) {
+    return Container(
+      padding: const EdgeInsets.all(20.0),
+      width: double.infinity,
+      child: ElevatedButton.icon(
+          onPressed: onTap,
+          icon:  Icon(FontAwesomeIcons.apple, color: iconColor,),
+          label: Text(title),
+        style: ElevatedButton.styleFrom(
+          padding: const EdgeInsets.all(20),
+          primary: backgroundColor,
+          shape:   RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(12), // <-- Radius
+          ),
+        ),
+      ),
+    );
+  }
+
+  static Widget facebookButton({required VoidCallback onTap, String title = "Login With Facebook",Color backgroundColor = facebookColor, Color iconColor= Colors.white}) {
     return Container(
       padding: const EdgeInsets.all(20.0),
       width: double.infinity,
@@ -140,7 +159,18 @@ class SocialButton{
 
   // Circle Buttons
 
- static Widget facebookButtonCircle({required VoidCallback onTap,Color backgroundColor = facebookColor, Color iconColor= Colors.white}) {
+ static Widget appleButtonCircle({required VoidCallback onTap,Color backgroundColor = appleColor, Color iconColor= Colors.white}) {
+    return ElevatedButton(onPressed: onTap,
+      child: Icon(FontAwesomeIcons.apple, color: iconColor,),
+      style: ElevatedButton.styleFrom(
+        shape: const CircleBorder(),
+        primary: backgroundColor,
+        padding: const EdgeInsets.all(20),
+      ),);
+  }
+
+
+  static Widget facebookButtonCircle({required VoidCallback onTap,Color backgroundColor = facebookColor, Color iconColor= Colors.white}) {
     return ElevatedButton(onPressed: onTap,
       child: Icon(FontAwesomeIcons.facebookF, color: iconColor,),
       style: ElevatedButton.styleFrom(

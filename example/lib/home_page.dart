@@ -16,6 +16,8 @@ class HomePage extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              SocialButton.appleButton(onTap: (){}),
+              const SizedBox(height: 2,),
               SocialButton.facebookButton(onTap: (){}),
               const SizedBox(height: 2,),
               SocialButton.googleButton(onTap: (){}),
