@@ -19,7 +19,10 @@ class HomePage extends StatelessWidget {
               SocialButton.facebookButton(onTap: (){}),
               const SizedBox(height: 2,),
               SocialButton.googleButton(onTap: (){}),
-
+              const SizedBox(height: 2,),
+              SocialButton.linkedinButton(onTap: (){}),
+              const SizedBox(height: 2,),
+              SocialButton.twitterButton(onTap: (){}),
               const SizedBox(height: 2,),
               SocialButton.whatsappButton(onTap: (){}),
               const SizedBox(height: 2,),
