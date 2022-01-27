@@ -1,4 +1,4 @@
-[![pub package](https://img.shields.io/pub/v/social_login_buttons.svg)](https://pub.dev/packages/flutter_social_button)
+[![pub package](https://img.shields.io/pub/v/flutter_social_button.svg)](https://pub.dev/packages/flutter_social_button)
 [![pub points](https://badges.bar/social_login_buttons/pub%20points)](https://pub.dev/packages/flutter_social_button)
 
 
