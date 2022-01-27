@@ -37,6 +37,7 @@ class HomePage extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
+                  SocialButton.appleButtonCircle(onTap: (){}),
                   SocialButton.facebookButtonCircle(onTap: (){}),
                   SocialButton.googleButtonCircle(onTap: (){}),
                   SocialButton.twitterButtonCircle(onTap: (){}),
