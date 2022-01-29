@@ -5,6 +5,8 @@ import 'package:flutter_social_button/constants.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class SocialButton {
+
+
   static Widget appleButton(
       {required VoidCallback onTap,
       String title = "Login With Apple",
@@ -358,4 +360,5 @@ class SocialButton {
       ),
     );
   }
+
 }

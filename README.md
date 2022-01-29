@@ -30,6 +30,40 @@ dart
     flutter_social_button: any
 ```
 
+
+## Usage Example
+
+import flutter_social_button.dart
+
+```
+
+import 'package:flutter_social_button/flutter_social_button.dart';
+
+```
+## For built-in buttons.
+
+```
+
+// for full width Buttons
+
+SocialButton.facebookButton(
+onTap: (){},
+title: 'Login With Facebook', // for change button Text
+backgroundColor: Colors.blue,  // for change background color
+iconColor: Colors.black,  // for change icon color
+);
+
+// for Mini Circle Buttons
+
+SocialButton.facebookButtonCircle(
+onTap: (){},
+backgroundColor: Colors.blue,  // for change background color
+iconColor: Colors.black,  // for change icon color
+);
+
+```
+
+
 ## Button Types
 
 - Facebook
