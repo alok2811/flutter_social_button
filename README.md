@@ -1,8 +1,10 @@
+## Flutter Social Button
+
 [![pub package](https://img.shields.io/pub/v/flutter_social_button.svg)](https://pub.dev/packages/flutter_social_button)
 [![pub points](https://badges.bar/flutter_social_button/pub%20points)](https://pub.dev/packages/flutter_social_button)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-in-0e76a8)](https://www.linkedin.com/in/alok-dubey-02ba331b6)
+[![Youtube](https://img.shields.io/youtube/channel/views/UC7S6rSRNON1_YvKgiUjfyIw?style=social)](https://www.youtube.com/channel/UC7S6rSRNON1_YvKgiUjfyIw)
 
-
-# Flutter Social Button
 
 Flutter Social Button is a flutter package to create social media login buttons easily to any flutter app.
 
@@ -46,20 +48,32 @@ import 'package:flutter_social_button/flutter_social_button.dart';
 
 // for full width Buttons
 
-SocialButton.facebookButton(
-onTap: (){},
-title: 'Login With Facebook', // for change button Text
-backgroundColor: Colors.blue,  // for change background color
-iconColor: Colors.black,  // for change icon color
-);
+            //For default Button Its return a Email Button
+               FlutterSocialButton(
+                   onTap: () {}, ), 
+                   
+            //For facebook Button   
+            
+             FlutterSocialButton(
+                onTap: () {},
+                buttonType: ButtonType.facebook, // Button type for different type buttons
+              ),
+              
+          //For google Button
+          
+               FlutterSocialButton(
+                onTap: () {},
+                buttonType: ButtonType.google, // Button type for different type buttons
+                iconColor: Colors.black,  // for change icons colors
+              ),  
 
-// for Mini Circle Buttons
+           // for Mini Circle Button
 
-SocialButton.facebookButtonCircle(
-onTap: (){},
-backgroundColor: Colors.blue,  // for change background color
-iconColor: Colors.black,  // for change icon color
-);
+                 FlutterSocialButton(
+                    onTap: () {},
+                    mini: true,   //just pass true for mini circle buttons
+                    buttonType: ButtonType.phone,  // Button type for different type buttons
+                  ),
 
 ```
 
@@ -74,6 +88,7 @@ iconColor: Colors.black,  // for change icon color
 - Apple
 - Github
 - Phone
+- Email
 
 
 ## Example
@@ -89,10 +104,11 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Social Buttons',
+      title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -116,35 +132,77 @@ class HomePage extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              SocialButton.appleButton(onTap: (){}),
-              const SizedBox(height: 2,),
-              SocialButton.facebookButton(onTap: (){}),
-              const SizedBox(height: 2,),
-              SocialButton.googleButton(onTap: (){}),
-              const SizedBox(height: 2,),
-              SocialButton.linkedinButton(onTap: (){}),
-              const SizedBox(height: 2,),
-              SocialButton.twitterButton(onTap: (){}),
-              const SizedBox(height: 2,),
-              SocialButton.whatsappButton(onTap: (){}),
-              const SizedBox(height: 2,),
-              SocialButton.githubButton(onTap: (){}),
-              const SizedBox(height: 2,),
-              SocialButton.phoneButton(onTap: (){}),
+              //For default Button
+              FlutterSocialButton(
+                onTap: () {},
+              ),
+              const SizedBox(
+                height: 2,
+              ),
 
-              const Divider(color: Colors.black, thickness: 2.5,),
+              //For facebook Button
+              FlutterSocialButton(
+                onTap: () {},
+                buttonType: ButtonType.facebook,
+              ),
+              const SizedBox(
+                height: 2,
+              ),
 
+              //For google Button
+              FlutterSocialButton(
+                onTap: () {},
+                buttonType: ButtonType.google,
+              ),
+              const SizedBox(
+                height: 2,
+              ),
+
+              //For phone Button
+              FlutterSocialButton(
+                onTap: () {},
+                buttonType: ButtonType.phone,
+              ),
+
+              const SizedBox(
+                height: 2,
+              ),
+
+              //For Whatsapp Button
+              FlutterSocialButton(
+                onTap: () {},
+                buttonType: ButtonType.whatsapp,
+              ),
+              const SizedBox(
+                height: 2,
+              ),
+
+              const Divider(
+                color: Colors.black,
+                thickness: 2.5,
+              ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  SocialButton.appleButtonCircle(onTap: (){}),
-                  SocialButton.facebookButtonCircle(onTap: (){}),
-                  SocialButton.googleButtonCircle(onTap: (){}),
-                  SocialButton.twitterButtonCircle(onTap: (){}),
-                  SocialButton.linkedinButtonCircle(onTap: (){}),
-                  SocialButton.whatsappButtonCircle(onTap: (){}),
-                  SocialButton.githubButtonCircle(onTap: (){}),
-                  SocialButton.phoneButtonCircle(onTap: (){}),
+                  FlutterSocialButton(
+                    onTap: () {},
+                    mini: true,
+                  ),
+                  FlutterSocialButton(
+                    onTap: () {},
+                    mini: true,
+                    buttonType: ButtonType.facebook,
+                  ),
+                  FlutterSocialButton(
+                    onTap: () {},
+                    mini: true,
+                    buttonType: ButtonType.google,
+                  ),
+                  FlutterSocialButton(
+                    onTap: () {},
+                    mini: true,
+                    buttonType: ButtonType.phone,
+                  ),
                 ],
               )
             ],
@@ -154,6 +212,7 @@ class HomePage extends StatelessWidget {
     );
   }
 }
+
 
 ```
 
