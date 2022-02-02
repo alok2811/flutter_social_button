@@ -5,8 +5,8 @@
 [![pub package](https://img.shields.io/pub/v/flutter_social_button.svg)](https://pub.dev/packages/flutter_social_button)
 [![pub points](https://badges.bar/flutter_social_button/pub%20points)](https://pub.dev/packages/flutter_social_button)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-in-0e76a8)](https://www.linkedin.com/in/alok-dubey-02ba331b6)
-[![Instagram](https://img.shields.io/badge/Instagram-E4405F?logo=instagram&logoColor=white)](https://www.linkedin.com/in/alok-dubey-02ba331b6)
-[![Youtube](https://img.shields.io/youtube/channel/views/UC7S6rSRNON1_YvKgiUjfyIw?style=social)](https://www.youtube.com/channel/UC7S6rSRNON1_YvKgiUjfyIw)
+[![Instagram](https://img.shields.io/badge/Instagram-E4405F?logo=instagram&logoColor=white)](https://www.instagram.com/flutter_coding_/)
+[![Youtube](https://img.shields.io/badge/YouTube-FF0000?logo=youtube&logoColor=white)](https://www.youtube.com/channel/UC7S6rSRNON1_YvKgiUjfyIw)
 
 
 Flutter Social Button is a flutter package to create social media login buttons easily to any flutter app.
