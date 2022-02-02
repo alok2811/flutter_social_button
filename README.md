@@ -5,6 +5,7 @@
 [![pub package](https://img.shields.io/pub/v/flutter_social_button.svg)](https://pub.dev/packages/flutter_social_button)
 [![pub points](https://badges.bar/flutter_social_button/pub%20points)](https://pub.dev/packages/flutter_social_button)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-in-0e76a8)](https://www.linkedin.com/in/alok-dubey-02ba331b6)
+[![Instagram](https://img.shields.io/badge/Instagram)](https://www.linkedin.com/in/alok-dubey-02ba331b6)
 [![Youtube](https://img.shields.io/youtube/channel/views/UC7S6rSRNON1_YvKgiUjfyIw?style=social)](https://www.youtube.com/channel/UC7S6rSRNON1_YvKgiUjfyIw)
 
 
