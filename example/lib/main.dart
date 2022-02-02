@@ -36,50 +36,79 @@ class HomePage extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              SocialButton.appleButton(onTap: () {}),
+              //For default Button
+              FlutterSocialButton(
+                onTap: () {},
+              ),
               const SizedBox(
                 height: 2,
               ),
-              SocialButton.facebookButton(onTap: () {}),
+
+              //For facebook Button
+              FlutterSocialButton(
+                onTap: () {},
+                buttonType: ButtonType.facebook,
+              ),
               const SizedBox(
                 height: 2,
               ),
-              SocialButton.googleButton(onTap: () {}),
+
+              //For google Button
+              FlutterSocialButton(
+                onTap: () {},
+                buttonType: ButtonType.google,
+                iconColor: Colors.black,
+              ),
               const SizedBox(
                 height: 2,
               ),
-              SocialButton.linkedinButton(onTap: () {}),
+
+              //For phone Button
+              FlutterSocialButton(
+                onTap: () {},
+                buttonType: ButtonType.phone,
+              ),
+
               const SizedBox(
                 height: 2,
               ),
-              SocialButton.twitterButton(onTap: () {}),
+
+              //For Whatsapp Button
+              FlutterSocialButton(
+                onTap: () {},
+                buttonType: ButtonType.whatsapp,
+              ),
               const SizedBox(
                 height: 2,
               ),
-              SocialButton.whatsappButton(onTap: () {}),
-              const SizedBox(
-                height: 2,
-              ),
-              SocialButton.githubButton(onTap: () {}),
-              const SizedBox(
-                height: 2,
-              ),
-              SocialButton.phoneButton(onTap: () {}),
+
               const Divider(
                 color: Colors.black,
                 thickness: 2.5,
               ),
+
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  SocialButton.appleButtonCircle(onTap: () {}),
-                  SocialButton.facebookButtonCircle(onTap: () {}),
-                  SocialButton.googleButtonCircle(onTap: () {}),
-                  SocialButton.twitterButtonCircle(onTap: () {}),
-                  SocialButton.linkedinButtonCircle(onTap: () {}),
-                  SocialButton.whatsappButtonCircle(onTap: () {}),
-                  SocialButton.githubButtonCircle(onTap: () {}),
-                  SocialButton.phoneButtonCircle(onTap: () {}),
+                  FlutterSocialButton(
+                    onTap: () {},
+                    mini: true,
+                  ),
+                  FlutterSocialButton(
+                    onTap: () {},
+                    mini: true,
+                    buttonType: ButtonType.facebook,
+                  ),
+                  FlutterSocialButton(
+                    onTap: () {},
+                    mini: true,
+                    buttonType: ButtonType.google,
+                  ),
+                  FlutterSocialButton(
+                    onTap: () {},
+                    mini: true,
+                    buttonType: ButtonType.phone,
+                  ),
                 ],
               )
             ],
