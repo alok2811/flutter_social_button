@@ -1,3 +1,5 @@
+<h1 align="center">Flutter Social Button</h1>
+
 ## Flutter Social Button
 
 [![pub package](https://img.shields.io/pub/v/flutter_social_button.svg)](https://pub.dev/packages/flutter_social_button)
