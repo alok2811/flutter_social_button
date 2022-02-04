@@ -9,22 +9,15 @@
 [![Facebook](https://img.shields.io/badge/Facebook-1877F2?ogo=facebook&logoColor=white)](https://www.facebook.com/dalok2811/)
 [![Youtube](https://img.shields.io/badge/YouTube-FF0000?logo=youtube&logoColor=white)](https://www.youtube.com/channel/UC7S6rSRNON1_YvKgiUjfyIw)
 
+## Features
 
 Flutter Social Button is a flutter package to create social media login buttons easily to any flutter app.
-
-## Screenshot
-
-#Mobile View
-
+<br>
 ![Image](https://github.com/alok2811/flutter_social_button/blob/master/screenshots/phone_screen.png)
-
-#Web View
 
 ![Image](https://github.com/alok2811/flutter_social_button/blob/master/screenshots/desktop_screen.png)
 
 ## Getting started
-
-## Usage
 
 Add the dependency in pubsec.yaml file.
 
@@ -216,7 +209,6 @@ class HomePage extends StatelessWidget {
     );
   }
 }
-
 
 ```
 

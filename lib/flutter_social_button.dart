@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_social_button/constants.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-//This is for multiple Types of button
+//This is for define ButtonType of buttons List
 enum ButtonType {
   facebook,
   google,
@@ -16,6 +16,14 @@ enum ButtonType {
   phone,
   email
 }
+
+/*
+* onTap for execute method after click of button
+* IconColors Change the color of icon in app
+* mini is bool function which define the Small and  full size buttions
+* title are pre defind but if we want to change then we also can make a custom title.
+* Colors of button already defined in constnt class
+*/
 
 class FlutterSocialButton extends StatelessWidget {
   final VoidCallback onTap;
@@ -32,6 +40,8 @@ class FlutterSocialButton extends StatelessWidget {
     this.mini = false,
     this.title,
   }) : super(key: key);
+
+  // If we pass mini true its change button to small Circular button
 
   @override
   Widget build(BuildContext context) {
@@ -70,6 +80,7 @@ class FlutterSocialButton extends StatelessWidget {
                   ),
                 ),
               );
+
       //Facebook Button implementation
       case ButtonType.facebook:
         return mini
@@ -104,6 +115,7 @@ class FlutterSocialButton extends StatelessWidget {
                   ),
                 ),
               );
+
       //Google Button implementation
       case ButtonType.google:
         return mini
@@ -172,6 +184,7 @@ class FlutterSocialButton extends StatelessWidget {
                   ),
                 ),
               );
+
       //Linkedin Button implementation
       case ButtonType.linkedin:
         return mini

@@ -1,6 +1,6 @@
 name: flutter_social_button
 description: Flutter Social Button is a flutter package to create social media login buttons easily to any flutter app.
-version: 1.1.1
+version: 1.0.2
 homepage: https://github.com/alok2811/flutter_social_button
 
 environment:
