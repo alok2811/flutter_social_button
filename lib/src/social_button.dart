@@ -42,7 +42,7 @@ class FlutterSocialButton extends StatelessWidget {
             ? ElevatedButton(
                 onPressed: onTap,
                 child: Icon(
-                  FontAwesomeIcons.facebookF,
+                  FontAwesomeIcons.apple,
                   color: iconColor,
                 ),
                 style: ElevatedButton.styleFrom(
