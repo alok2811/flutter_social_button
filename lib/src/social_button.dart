@@ -11,6 +11,7 @@ enum ButtonType {
   whatsapp,
   apple,
   github,
+  yahoo,
   phone,
   email
 }
@@ -42,7 +43,7 @@ class FlutterSocialButton extends StatelessWidget {
             ? ElevatedButton(
                 onPressed: onTap,
                 child: Icon(
-                  FontAwesomeIcons.facebookF,
+                  FontAwesomeIcons.apple,
                   color: iconColor,
                 ),
                 style: ElevatedButton.styleFrom(
@@ -70,6 +71,41 @@ class FlutterSocialButton extends StatelessWidget {
                   ),
                 ),
               );
+
+    //Yahoo Button implementation
+      case ButtonType.yahoo:
+        return mini
+            ? ElevatedButton(
+          onPressed: onTap,
+          child: Icon(
+            FontAwesomeIcons.yahoo,
+            color: iconColor,
+          ),
+          style: ElevatedButton.styleFrom(
+            shape: const CircleBorder(),
+            primary: yahooColor,
+            padding: const EdgeInsets.all(20),
+          ),
+        )
+            : Container(
+          padding: const EdgeInsets.all(20.0),
+          width: double.infinity,
+          child: ElevatedButton.icon(
+            onPressed: onTap,
+            icon: Icon(
+              FontAwesomeIcons.yahoo,
+              color: iconColor,
+            ),
+            label: Text(title != null ? '$title' : 'Login With Yahoo'),
+            style: ElevatedButton.styleFrom(
+              padding: const EdgeInsets.all(20),
+              primary: yahooColor,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(12), // <-- Radius
+              ),
+            ),
+          ),
+        );
 
       //Facebook Button implementation
       case ButtonType.facebook:
@@ -112,7 +148,7 @@ class FlutterSocialButton extends StatelessWidget {
             ? ElevatedButton(
                 onPressed: onTap,
                 child: Icon(
-                  FontAwesomeIcons.google,
+                  FontAwesomeIcons.googlePlusSquare,
                   color: iconColor,
                 ),
                 style: ElevatedButton.styleFrom(

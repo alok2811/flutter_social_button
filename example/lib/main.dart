@@ -44,6 +44,16 @@ class HomePage extends StatelessWidget {
                 height: 2,
               ),
 
+              //For default Button
+              FlutterSocialButton(
+                onTap: () {},
+                buttonType: ButtonType.yahoo,
+              ),
+              const SizedBox(
+                height: 2,
+              ),
+
+
               //For facebook Button
               FlutterSocialButton(
                 onTap: () {},
@@ -108,6 +118,12 @@ class HomePage extends StatelessWidget {
                     onTap: () {},
                     mini: true,
                     buttonType: ButtonType.phone,
+                  ),
+
+                  FlutterSocialButton(
+                    onTap: () {},
+                    mini: true,
+                    buttonType: ButtonType.yahoo,
                   ),
                 ],
               )
