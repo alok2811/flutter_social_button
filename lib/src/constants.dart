@@ -23,5 +23,6 @@ const Color yahooColor = Color(0xff773291);
 
 //Phone Background Color
 const Color phoneColor = Color(0xff455a64);
+
 //Email Background Color
 const Color emailColor = Color(0xff3F2F12);

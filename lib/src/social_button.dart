@@ -96,7 +96,7 @@ class FlutterSocialButton extends StatelessWidget {
               FontAwesomeIcons.yahoo,
               color: iconColor,
             ),
-            label: Text(title != null ? '$title' : 'Login With Yahoo'),
+            label: Text(title != null ? '$title' : 'Login With Yahoo!'),
             style: ElevatedButton.styleFrom(
               padding: const EdgeInsets.all(20),
               primary: yahooColor,

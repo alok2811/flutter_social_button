@@ -79,6 +79,7 @@ import 'package:flutter_social_button/flutter_social_button.dart';
 
 - Facebook
 - Google
+- Yahoo
 - Twitter
 - Linkedin
 - Whatsapp
