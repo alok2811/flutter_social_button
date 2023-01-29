@@ -76,6 +76,12 @@ class HomePage extends StatelessWidget {
               //For phone Button
               FlutterSocialButton(
                 onTap: () {},
+                buttonType: ButtonType.apple,
+              ),
+
+              //For phone Button
+              FlutterSocialButton(
+                onTap: () {},
                 buttonType: ButtonType.phone,
               ),
 

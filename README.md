@@ -3,7 +3,7 @@
 ## Flutter Social Button
 
 [![pub package](https://img.shields.io/pub/v/flutter_social_button.svg)](https://pub.dev/packages/flutter_social_button)
-[![pub points](https://badges.bar/flutter_social_button/pub%20points)](https://pub.dev/packages/flutter_social_button)
+[![pub points](https://img.shields.io/pub/likes/flutter_social_button?logo=dart)](https://pub.dev/packages/flutter_social_button)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-in-0e76a8)](https://www.linkedin.com/in/alok-dubey-02ba331b6)
 [![Instagram](https://img.shields.io/badge/Instagram-E4405F?logo=instagram&logoColor=white)](https://www.instagram.com/flutter_coding_/)
 [![Facebook](https://img.shields.io/badge/Facebook-1877F2?logo=facebook&logoColor=white)](https://www.facebook.com/dalok2811/)
@@ -13,10 +13,6 @@
 
 Flutter Social Button is a flutter package to create social media login buttons easily to any flutter app.
 <br>
-![Image](https://github.com/alok2811/flutter_social_button/blob/master/screenshots/phone_screen.png)
-
-![Image](https://github.com/alok2811/flutter_social_button/blob/master/screenshots/desktop_screen.png)
-
 ## Getting started
 
 Add the dependency in pubsec.yaml file.
@@ -90,6 +86,8 @@ import 'package:flutter_social_button/flutter_social_button.dart';
 
 
 ## Example
+
+<img src = "https://github.com/alok2811/flutter_social_button/blob/master/screenshots/phone_screen.png" width="250">
 
 ```
 import 'package:flutter/material.dart';
@@ -212,6 +210,8 @@ class HomePage extends StatelessWidget {
 }
 
 ```
+
+
 
 
 ## Contributing
