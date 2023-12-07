@@ -13,7 +13,8 @@ enum ButtonType {
   github,
   yahoo,
   phone,
-  email
+  email,
+  instagram
 }
 
 class FlutterSocialButton extends StatelessWidget {
@@ -43,7 +44,8 @@ class FlutterSocialButton extends StatelessWidget {
             ? ElevatedButton(
                 onPressed: onTap,
                 style: ElevatedButton.styleFrom(
-                  shape: const CircleBorder(), backgroundColor: appleColor,
+                  shape: const CircleBorder(),
+                  backgroundColor: appleColor,
                   padding: const EdgeInsets.all(20),
                 ),
                 child: Icon(
@@ -62,7 +64,8 @@ class FlutterSocialButton extends StatelessWidget {
                   ),
                   label: Text(title != null ? '$title' : 'Login With Apple'),
                   style: ElevatedButton.styleFrom(
-                    padding: const EdgeInsets.all(20), backgroundColor: appleColor,
+                    padding: const EdgeInsets.all(20),
+                    backgroundColor: appleColor,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(12), // <-- Radius
                     ),
@@ -70,38 +73,40 @@ class FlutterSocialButton extends StatelessWidget {
                 ),
               );
 
-    //Yahoo Button implementation
+      //Yahoo Button implementation
       case ButtonType.yahoo:
         return mini
             ? ElevatedButton(
-          onPressed: onTap,
-          style: ElevatedButton.styleFrom(
-            shape: const CircleBorder(), backgroundColor: yahooColor,
-            padding: const EdgeInsets.all(20),
-          ),
-          child: Icon(
-            FontAwesomeIcons.yahoo,
-            color: iconColor,
-          ),
-        )
+                onPressed: onTap,
+                style: ElevatedButton.styleFrom(
+                  shape: const CircleBorder(),
+                  backgroundColor: yahooColor,
+                  padding: const EdgeInsets.all(20),
+                ),
+                child: Icon(
+                  FontAwesomeIcons.yahoo,
+                  color: iconColor,
+                ),
+              )
             : Container(
-          padding: const EdgeInsets.all(20.0),
-          width: double.infinity,
-          child: ElevatedButton.icon(
-            onPressed: onTap,
-            icon: Icon(
-              FontAwesomeIcons.yahoo,
-              color: iconColor,
-            ),
-            label: Text(title != null ? '$title' : 'Login With Yahoo!'),
-            style: ElevatedButton.styleFrom(
-              padding: const EdgeInsets.all(20), backgroundColor: yahooColor,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(12), // <-- Radius
-              ),
-            ),
-          ),
-        );
+                padding: const EdgeInsets.all(20.0),
+                width: double.infinity,
+                child: ElevatedButton.icon(
+                  onPressed: onTap,
+                  icon: Icon(
+                    FontAwesomeIcons.yahoo,
+                    color: iconColor,
+                  ),
+                  label: Text(title != null ? '$title' : 'Login With Yahoo!'),
+                  style: ElevatedButton.styleFrom(
+                    padding: const EdgeInsets.all(20),
+                    backgroundColor: yahooColor,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(12), // <-- Radius
+                    ),
+                  ),
+                ),
+              );
 
       //Facebook Button implementation
       case ButtonType.facebook:
@@ -109,7 +114,8 @@ class FlutterSocialButton extends StatelessWidget {
             ? ElevatedButton(
                 onPressed: onTap,
                 style: ElevatedButton.styleFrom(
-                  shape: const CircleBorder(), backgroundColor: facebookColor,
+                  shape: const CircleBorder(),
+                  backgroundColor: facebookColor,
                   padding: const EdgeInsets.all(20),
                 ),
                 child: Icon(
@@ -128,7 +134,8 @@ class FlutterSocialButton extends StatelessWidget {
                   ),
                   label: Text(title != null ? '$title' : 'Login With Facebook'),
                   style: ElevatedButton.styleFrom(
-                    padding: const EdgeInsets.all(20), backgroundColor: facebookColor,
+                    padding: const EdgeInsets.all(20),
+                    backgroundColor: facebookColor,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(12), // <-- Radius
                     ),
@@ -142,7 +149,8 @@ class FlutterSocialButton extends StatelessWidget {
             ? ElevatedButton(
                 onPressed: onTap,
                 style: ElevatedButton.styleFrom(
-                  shape: const CircleBorder(), backgroundColor: googleColor,
+                  shape: const CircleBorder(),
+                  backgroundColor: googleColor,
                   padding: const EdgeInsets.all(20),
                 ),
                 child: Icon(
@@ -161,24 +169,27 @@ class FlutterSocialButton extends StatelessWidget {
                   ),
                   label: Text(title != null ? '$title' : 'Login With Google'),
                   style: ElevatedButton.styleFrom(
-                    padding: const EdgeInsets.all(20), backgroundColor: googleColor,
+                    padding: const EdgeInsets.all(20),
+                    backgroundColor: googleColor,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(12), // <-- Radius
                     ),
                   ),
                 ),
               );
+
       //Twitter Button implementation
       case ButtonType.twitter:
         return mini
             ? ElevatedButton(
                 onPressed: onTap,
                 style: ElevatedButton.styleFrom(
-                  shape: const CircleBorder(), backgroundColor: twitterColor,
+                  shape: const CircleBorder(),
+                  backgroundColor: twitterColor,
                   padding: const EdgeInsets.all(20),
                 ),
                 child: Icon(
-                  FontAwesomeIcons.twitter,
+                  FontAwesomeIcons.x,
                   color: iconColor,
                 ),
               )
@@ -188,12 +199,13 @@ class FlutterSocialButton extends StatelessWidget {
                 child: ElevatedButton.icon(
                   onPressed: onTap,
                   icon: Icon(
-                    FontAwesomeIcons.twitter,
+                    FontAwesomeIcons.x,
                     color: iconColor,
                   ),
-                  label: Text(title != null ? '$title' : 'Login With Twitter'),
+                  label: Text(title != null ? '$title' : 'Login With X'),
                   style: ElevatedButton.styleFrom(
-                    padding: const EdgeInsets.all(20), backgroundColor: twitterColor,
+                    padding: const EdgeInsets.all(20),
+                    backgroundColor: twitterColor,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(12), // <-- Radius
                     ),
@@ -207,7 +219,8 @@ class FlutterSocialButton extends StatelessWidget {
             ? ElevatedButton(
                 onPressed: onTap,
                 style: ElevatedButton.styleFrom(
-                  shape: const CircleBorder(), backgroundColor: linkedinColor,
+                  shape: const CircleBorder(),
+                  backgroundColor: linkedinColor,
                   padding: const EdgeInsets.all(20),
                 ),
                 child: Icon(
@@ -226,20 +239,23 @@ class FlutterSocialButton extends StatelessWidget {
                   ),
                   label: Text(title != null ? '$title' : 'Login with Linkedin'),
                   style: ElevatedButton.styleFrom(
-                    padding: const EdgeInsets.all(20), backgroundColor: linkedinColor,
+                    padding: const EdgeInsets.all(20),
+                    backgroundColor: linkedinColor,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(12), // <-- Radius
                     ),
                   ),
                 ),
               );
+
       //Whatsapp Button implementation
       case ButtonType.whatsapp:
         return mini
             ? ElevatedButton(
                 onPressed: onTap,
                 style: ElevatedButton.styleFrom(
-                  shape: const CircleBorder(), backgroundColor: whatsappColor,
+                  shape: const CircleBorder(),
+                  backgroundColor: whatsappColor,
                   padding: const EdgeInsets.all(20),
                 ),
                 child: Icon(
@@ -258,20 +274,23 @@ class FlutterSocialButton extends StatelessWidget {
                   ),
                   label: Text(title != null ? '$title' : 'Login With Whatsapp'),
                   style: ElevatedButton.styleFrom(
-                    padding: const EdgeInsets.all(20), backgroundColor: whatsappColor,
+                    padding: const EdgeInsets.all(20),
+                    backgroundColor: whatsappColor,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(12), // <-- Radius
                     ),
                   ),
                 ),
               );
+
       //GitHub Button implementation
       case ButtonType.github:
         return mini
             ? ElevatedButton(
                 onPressed: onTap,
                 style: ElevatedButton.styleFrom(
-                  shape: const CircleBorder(), backgroundColor: phoneColor,
+                  shape: const CircleBorder(),
+                  backgroundColor: phoneColor,
                   padding: const EdgeInsets.all(20),
                 ),
                 child: Icon(
@@ -290,20 +309,23 @@ class FlutterSocialButton extends StatelessWidget {
                   ),
                   label: Text(title != null ? '$title' : 'Login With Github'),
                   style: ElevatedButton.styleFrom(
-                    padding: const EdgeInsets.all(20), backgroundColor: githubColor,
+                    padding: const EdgeInsets.all(20),
+                    backgroundColor: githubColor,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(12), // <-- Radius
                     ),
                   ),
                 ),
               );
+
       //Phone Button implementation
       case ButtonType.phone:
         return mini
             ? ElevatedButton(
                 onPressed: onTap,
                 style: ElevatedButton.styleFrom(
-                  shape: const CircleBorder(), backgroundColor: phoneColor,
+                  shape: const CircleBorder(),
+                  backgroundColor: phoneColor,
                   padding: const EdgeInsets.all(20),
                 ),
                 child: Icon(
@@ -322,9 +344,61 @@ class FlutterSocialButton extends StatelessWidget {
                   ),
                   label: Text(title != null ? '$title' : 'Login With Phone'),
                   style: ElevatedButton.styleFrom(
-                    padding: const EdgeInsets.all(20), backgroundColor: phoneColor,
+                    padding: const EdgeInsets.all(20),
+                    backgroundColor: phoneColor,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(12), // <-- Radius
+                    ),
+                  ),
+                ),
+              );
+
+//Instagram button implementation
+      case ButtonType.instagram:
+        return mini
+            ? Container(
+                decoration: BoxDecoration(
+                  gradient: instagramGradient,
+                  borderRadius: BorderRadius.circular(40),
+                ),
+                child: ElevatedButton(
+                  onPressed: onTap,
+                  style: ElevatedButton.styleFrom(
+                    shape: const CircleBorder(),
+                    backgroundColor: Colors.transparent,
+                    padding: const EdgeInsets.all(20),
+                    shadowColor: Colors.transparent,
+                    elevation: 0,
+                  ),
+                  child: Icon(
+                    FontAwesomeIcons.instagram,
+                    color: iconColor,
+                  ),
+                ),
+              )
+            : Container(
+                padding: const EdgeInsets.all(20.0),
+                width: double.infinity,
+                child: Container(
+                  decoration: BoxDecoration(
+                      gradient: instagramGradient,
+                      borderRadius: BorderRadius.circular(12)),
+                  child: ElevatedButton.icon(
+                    onPressed: onTap,
+                    icon: Icon(
+                      FontAwesomeIcons.instagram,
+                      color: iconColor,
+                    ),
+                    label:
+                        Text(title != null ? '$title' : 'Login With Instagram'),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.transparent,
+                      shadowColor: Colors.transparent,
+                      elevation: 0,
+                      padding: const EdgeInsets.all(20),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(12), // <-- Radius
+                      ),
                     ),
                   ),
                 ),
@@ -336,7 +410,8 @@ class FlutterSocialButton extends StatelessWidget {
             ? ElevatedButton(
                 onPressed: onTap,
                 style: ElevatedButton.styleFrom(
-                  shape: const CircleBorder(), backgroundColor: emailColor,
+                  shape: const CircleBorder(),
+                  backgroundColor: emailColor,
                   padding: const EdgeInsets.all(20),
                 ),
                 child: Icon(
@@ -355,7 +430,8 @@ class FlutterSocialButton extends StatelessWidget {
                   ),
                   label: Text(title != null ? '$title' : 'Login With Email'),
                   style: ElevatedButton.styleFrom(
-                    padding: const EdgeInsets.all(20), backgroundColor: emailColor,
+                    padding: const EdgeInsets.all(20),
+                    backgroundColor: emailColor,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(12), // <-- Radius
                     ),
