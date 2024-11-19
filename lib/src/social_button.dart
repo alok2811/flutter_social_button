@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:flutter_social_button/src/constants.dart';
 
-//This is for define ButtonType of buttons List
+// This is for defining ButtonType of buttons List
 enum ButtonType {
   facebook,
   google,
@@ -23,6 +23,8 @@ class FlutterSocialButton extends StatelessWidget {
   final Color iconColor;
   final bool mini;
   final String? title;
+  final double iconSize;
+  final bool showLabel;
 
   const FlutterSocialButton({
     Key? key,
@@ -31,413 +33,192 @@ class FlutterSocialButton extends StatelessWidget {
     this.iconColor = Colors.white,
     this.mini = false,
     this.title,
+    this.iconSize = 24.0,
+    this.showLabel = true,
   }) : super(key: key);
 
-  // If we pass mini true its change button to small Circular button
+  // Helper function to avoid repetition of button implementation
+  Widget _buildButton({
+    required Color buttonColor,
+    required Icon icon,
+    required String label,
+    required VoidCallback onTap,
+    bool showLabel = true,
+  }) {
+    return mini
+        ? ElevatedButton(
+            onPressed: onTap,
+            style: ElevatedButton.styleFrom(
+              shape: const CircleBorder(),
+              backgroundColor: buttonColor,
+              padding: const EdgeInsets.all(20),
+            ),
+            child: icon,
+          )
+        : Container(
+            padding: const EdgeInsets.all(20.0),
+            width: double.infinity,
+            child: ElevatedButton.icon(
+              onPressed: onTap,
+              icon: icon,
+              label: showLabel ? Text(label) : SizedBox.shrink(),
+              style: ElevatedButton.styleFrom(
+                padding: const EdgeInsets.all(20),
+                backgroundColor: buttonColor,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(12), // <-- Radius
+                ),
+              ),
+            ),
+          );
+  }
 
   @override
   Widget build(BuildContext context) {
     switch (buttonType) {
-      //Apple Button implementation
+      // Apple Button implementation
       case ButtonType.apple:
-        return mini
-            ? ElevatedButton(
-                onPressed: onTap,
-                style: ElevatedButton.styleFrom(
-                  shape: const CircleBorder(),
-                  backgroundColor: appleColor,
-                  padding: const EdgeInsets.all(20),
-                ),
-                child: Icon(
-                  FontAwesomeIcons.apple,
-                  color: iconColor,
-                ),
-              )
-            : Container(
-                padding: const EdgeInsets.all(20.0),
-                width: double.infinity,
-                child: ElevatedButton.icon(
-                  onPressed: onTap,
-                  icon: Icon(
-                    FontAwesomeIcons.apple,
-                    color: iconColor,
-                  ),
-                  label: Text(title != null ? '$title' : 'Login With Apple'),
-                  style: ElevatedButton.styleFrom(
-                    padding: const EdgeInsets.all(20),
-                    backgroundColor: appleColor,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12), // <-- Radius
-                    ),
-                  ),
-                ),
-              );
+        return _buildButton(
+          buttonColor: appleColor,
+          icon: Icon(
+            FontAwesomeIcons.apple,
+            color: iconColor,
+            size: iconSize,
+          ),
+          label: title ?? 'Login With Apple',
+          onTap: onTap,
+        );
 
-      //Yahoo Button implementation
+      // Yahoo Button implementation
       case ButtonType.yahoo:
-        return mini
-            ? ElevatedButton(
-                onPressed: onTap,
-                style: ElevatedButton.styleFrom(
-                  shape: const CircleBorder(),
-                  backgroundColor: yahooColor,
-                  padding: const EdgeInsets.all(20),
-                ),
-                child: Icon(
-                  FontAwesomeIcons.yahoo,
-                  color: iconColor,
-                ),
-              )
-            : Container(
-                padding: const EdgeInsets.all(20.0),
-                width: double.infinity,
-                child: ElevatedButton.icon(
-                  onPressed: onTap,
-                  icon: Icon(
-                    FontAwesomeIcons.yahoo,
-                    color: iconColor,
-                  ),
-                  label: Text(title != null ? '$title' : 'Login With Yahoo!'),
-                  style: ElevatedButton.styleFrom(
-                    padding: const EdgeInsets.all(20),
-                    backgroundColor: yahooColor,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12), // <-- Radius
-                    ),
-                  ),
-                ),
-              );
+        return _buildButton(
+          buttonColor: yahooColor,
+          icon: Icon(
+            FontAwesomeIcons.yahoo,
+            color: iconColor,
+            size: iconSize,
+          ),
+          label: title ?? 'Login With Yahoo!',
+          onTap: onTap,
+        );
 
-      //Facebook Button implementation
+      // Facebook Button implementation
       case ButtonType.facebook:
-        return mini
-            ? ElevatedButton(
-                onPressed: onTap,
-                style: ElevatedButton.styleFrom(
-                  shape: const CircleBorder(),
-                  backgroundColor: facebookColor,
-                  padding: const EdgeInsets.all(20),
-                ),
-                child: Icon(
-                  FontAwesomeIcons.facebookF,
-                  color: iconColor,
-                ),
-              )
-            : Container(
-                padding: const EdgeInsets.all(20.0),
-                width: double.infinity,
-                child: ElevatedButton.icon(
-                  onPressed: onTap,
-                  icon: Icon(
-                    FontAwesomeIcons.facebookF,
-                    color: iconColor,
-                  ),
-                  label: Text(title != null ? '$title' : 'Login With Facebook'),
-                  style: ElevatedButton.styleFrom(
-                    padding: const EdgeInsets.all(20),
-                    backgroundColor: facebookColor,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12), // <-- Radius
-                    ),
-                  ),
-                ),
-              );
+        return _buildButton(
+          buttonColor: facebookColor,
+          icon: Icon(
+            FontAwesomeIcons.facebookF,
+            color: iconColor,
+            size: iconSize,
+          ),
+          label: title ?? 'Login With Facebook',
+          onTap: onTap,
+        );
 
-      //Google Button implementation
+      // Google Button implementation
       case ButtonType.google:
-        return mini
-            ? ElevatedButton(
-                onPressed: onTap,
-                style: ElevatedButton.styleFrom(
-                  shape: const CircleBorder(),
-                  backgroundColor: googleColor,
-                  padding: const EdgeInsets.all(20),
-                ),
-                child: Icon(
-                  FontAwesomeIcons.google,
-                  color: iconColor,
-                ),
-              )
-            : Container(
-                padding: const EdgeInsets.all(20.0),
-                width: double.infinity,
-                child: ElevatedButton.icon(
-                  onPressed: onTap,
-                  icon: Icon(
-                    FontAwesomeIcons.google,
-                    color: iconColor,
-                  ),
-                  label: Text(title != null ? '$title' : 'Login With Google'),
-                  style: ElevatedButton.styleFrom(
-                    padding: const EdgeInsets.all(20),
-                    backgroundColor: googleColor,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12), // <-- Radius
-                    ),
-                  ),
-                ),
-              );
+        return _buildButton(
+          buttonColor: googleColor,
+          icon: Icon(
+            FontAwesomeIcons.google,
+            color: iconColor,
+            size: iconSize,
+          ),
+          label: title ?? 'Login With Google',
+          onTap: onTap,
+        );
 
-      //Twitter Button implementation
+      // Twitter Button implementation
       case ButtonType.twitter:
-        return mini
-            ? ElevatedButton(
-                onPressed: onTap,
-                style: ElevatedButton.styleFrom(
-                  shape: const CircleBorder(),
-                  backgroundColor: twitterColor,
-                  padding: const EdgeInsets.all(20),
-                ),
-                child: Icon(
-                  FontAwesomeIcons.x,
-                  color: iconColor,
-                ),
-              )
-            : Container(
-                padding: const EdgeInsets.all(20.0),
-                width: double.infinity,
-                child: ElevatedButton.icon(
-                  onPressed: onTap,
-                  icon: Icon(
-                    FontAwesomeIcons.x,
-                    color: iconColor,
-                  ),
-                  label: Text(title != null ? '$title' : 'Login With X'),
-                  style: ElevatedButton.styleFrom(
-                    padding: const EdgeInsets.all(20),
-                    backgroundColor: twitterColor,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12), // <-- Radius
-                    ),
-                  ),
-                ),
-              );
+        return _buildButton(
+          buttonColor: twitterColor,
+          icon: Icon(
+            FontAwesomeIcons.x,
+            color: iconColor,
+            size: iconSize,
+          ),
+          label: title ?? 'Login With X',
+          onTap: onTap,
+        );
 
-      //Linkedin Button implementation
+      // Linkedin Button implementation
       case ButtonType.linkedin:
-        return mini
-            ? ElevatedButton(
-                onPressed: onTap,
-                style: ElevatedButton.styleFrom(
-                  shape: const CircleBorder(),
-                  backgroundColor: linkedinColor,
-                  padding: const EdgeInsets.all(20),
-                ),
-                child: Icon(
-                  FontAwesomeIcons.linkedin,
-                  color: iconColor,
-                ),
-              )
-            : Container(
-                padding: const EdgeInsets.all(20.0),
-                width: double.infinity,
-                child: ElevatedButton.icon(
-                  onPressed: onTap,
-                  icon: Icon(
-                    FontAwesomeIcons.linkedin,
-                    color: iconColor,
-                  ),
-                  label: Text(title != null ? '$title' : 'Login with Linkedin'),
-                  style: ElevatedButton.styleFrom(
-                    padding: const EdgeInsets.all(20),
-                    backgroundColor: linkedinColor,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12), // <-- Radius
-                    ),
-                  ),
-                ),
-              );
+        return _buildButton(
+          buttonColor: linkedinColor,
+          icon: Icon(
+            FontAwesomeIcons.linkedin,
+            color: iconColor,
+            size: iconSize,
+          ),
+          label: title ?? 'Login with Linkedin',
+          onTap: onTap,
+        );
 
-      //Whatsapp Button implementation
+      // Whatsapp Button implementation
       case ButtonType.whatsapp:
-        return mini
-            ? ElevatedButton(
-                onPressed: onTap,
-                style: ElevatedButton.styleFrom(
-                  shape: const CircleBorder(),
-                  backgroundColor: whatsappColor,
-                  padding: const EdgeInsets.all(20),
-                ),
-                child: Icon(
-                  FontAwesomeIcons.whatsapp,
-                  color: iconColor,
-                ),
-              )
-            : Container(
-                padding: const EdgeInsets.all(20.0),
-                width: double.infinity,
-                child: ElevatedButton.icon(
-                  onPressed: onTap,
-                  icon: Icon(
-                    FontAwesomeIcons.whatsapp,
-                    color: iconColor,
-                  ),
-                  label: Text(title != null ? '$title' : 'Login With Whatsapp'),
-                  style: ElevatedButton.styleFrom(
-                    padding: const EdgeInsets.all(20),
-                    backgroundColor: whatsappColor,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12), // <-- Radius
-                    ),
-                  ),
-                ),
-              );
+        return _buildButton(
+          buttonColor: whatsappColor,
+          icon: Icon(
+            FontAwesomeIcons.whatsapp,
+            color: iconColor,
+            size: iconSize,
+          ),
+          label: title ?? 'Login With Whatsapp',
+          onTap: onTap,
+        );
 
-      //GitHub Button implementation
+      // GitHub Button implementation
       case ButtonType.github:
-        return mini
-            ? ElevatedButton(
-                onPressed: onTap,
-                style: ElevatedButton.styleFrom(
-                  shape: const CircleBorder(),
-                  backgroundColor: phoneColor,
-                  padding: const EdgeInsets.all(20),
-                ),
-                child: Icon(
-                  FontAwesomeIcons.github,
-                  color: iconColor,
-                ),
-              )
-            : Container(
-                padding: const EdgeInsets.all(20.0),
-                width: double.infinity,
-                child: ElevatedButton.icon(
-                  onPressed: onTap,
-                  icon: Icon(
-                    FontAwesomeIcons.github,
-                    color: iconColor,
-                  ),
-                  label: Text(title != null ? '$title' : 'Login With Github'),
-                  style: ElevatedButton.styleFrom(
-                    padding: const EdgeInsets.all(20),
-                    backgroundColor: githubColor,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12), // <-- Radius
-                    ),
-                  ),
-                ),
-              );
+        return _buildButton(
+          buttonColor: githubColor,
+          icon: Icon(
+            FontAwesomeIcons.github,
+            color: iconColor,
+            size: iconSize,
+          ),
+          label: title ?? 'Login With Github',
+          onTap: onTap,
+        );
 
-      //Phone Button implementation
+      // Phone Button implementation
       case ButtonType.phone:
-        return mini
-            ? ElevatedButton(
-                onPressed: onTap,
-                style: ElevatedButton.styleFrom(
-                  shape: const CircleBorder(),
-                  backgroundColor: phoneColor,
-                  padding: const EdgeInsets.all(20),
-                ),
-                child: Icon(
-                  Icons.phone_android,
-                  color: iconColor,
-                ),
-              )
-            : Container(
-                padding: const EdgeInsets.all(20.0),
-                width: double.infinity,
-                child: ElevatedButton.icon(
-                  onPressed: onTap,
-                  icon: Icon(
-                    Icons.phone_android,
-                    color: iconColor,
-                  ),
-                  label: Text(title != null ? '$title' : 'Login With Phone'),
-                  style: ElevatedButton.styleFrom(
-                    padding: const EdgeInsets.all(20),
-                    backgroundColor: phoneColor,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12), // <-- Radius
-                    ),
-                  ),
-                ),
-              );
+        return _buildButton(
+          buttonColor: phoneColor,
+          icon: Icon(
+            Icons.phone_android,
+            color: iconColor,
+            size: iconSize,
+          ),
+          label: title ?? 'Login With Phone',
+          onTap: onTap,
+        );
 
-//Instagram button implementation
+      // Instagram Button implementation
       case ButtonType.instagram:
-        return mini
-            ? Container(
-                decoration: BoxDecoration(
-                  gradient: instagramGradient,
-                  borderRadius: BorderRadius.circular(40),
-                ),
-                child: ElevatedButton(
-                  onPressed: onTap,
-                  style: ElevatedButton.styleFrom(
-                    shape: const CircleBorder(),
-                    backgroundColor: Colors.transparent,
-                    padding: const EdgeInsets.all(20),
-                    shadowColor: Colors.transparent,
-                    elevation: 0,
-                  ),
-                  child: Icon(
-                    FontAwesomeIcons.instagram,
-                    color: iconColor,
-                  ),
-                ),
-              )
-            : Container(
-                padding: const EdgeInsets.all(20.0),
-                width: double.infinity,
-                child: Container(
-                  decoration: BoxDecoration(
-                      gradient: instagramGradient,
-                      borderRadius: BorderRadius.circular(12)),
-                  child: ElevatedButton.icon(
-                    onPressed: onTap,
-                    icon: Icon(
-                      FontAwesomeIcons.instagram,
-                      color: iconColor,
-                    ),
-                    label:
-                        Text(title != null ? '$title' : 'Login With Instagram'),
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.transparent,
-                      shadowColor: Colors.transparent,
-                      elevation: 0,
-                      padding: const EdgeInsets.all(20),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(12), // <-- Radius
-                      ),
-                    ),
-                  ),
-                ),
-              );
+        return _buildButton(
+          buttonColor: Colors.transparent, // Gradient used below
+          icon: Icon(
+            FontAwesomeIcons.instagram,
+            color: iconColor,
+            size: iconSize,
+          ),
+          label: title ?? 'Login With Instagram',
+          onTap: onTap,
+          showLabel: showLabel,
+        );
 
+      // Default Email Button implementation
       default:
-        //Email Button implementation
-        return mini
-            ? ElevatedButton(
-                onPressed: onTap,
-                style: ElevatedButton.styleFrom(
-                  shape: const CircleBorder(),
-                  backgroundColor: emailColor,
-                  padding: const EdgeInsets.all(20),
-                ),
-                child: Icon(
-                  Icons.email,
-                  color: iconColor,
-                ),
-              )
-            : Container(
-                padding: const EdgeInsets.all(20.0),
-                width: double.infinity,
-                child: ElevatedButton.icon(
-                  onPressed: onTap,
-                  icon: Icon(
-                    Icons.email,
-                    color: iconColor,
-                  ),
-                  label: Text(title != null ? '$title' : 'Login With Email'),
-                  style: ElevatedButton.styleFrom(
-                    padding: const EdgeInsets.all(20),
-                    backgroundColor: emailColor,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12), // <-- Radius
-                    ),
-                  ),
-                ),
-              );
+        return _buildButton(
+          buttonColor: emailColor,
+          icon: Icon(
+            Icons.email,
+            color: iconColor,
+            size: iconSize,
+          ),
+          label: title ?? 'Login With Email',
+          onTap: onTap,
+        );
     }
   }
 }
