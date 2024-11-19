@@ -50,19 +50,11 @@ class HomePage extends StatelessWidget {
               ),
               const SizedBox(height: 10),
 
-              /// Facebook Login Button
-              FlutterSocialButton(
-                onTap: () {},
-                buttonType: ButtonType.facebook,
-                title: 'Login with Facebook',
-              ),
-              const SizedBox(height: 10),
-
               /// Google Login Button with Black icon
               FlutterSocialButton(
                 onTap: () {},
                 buttonType: ButtonType.google,
-                iconColor: Colors.black,
+                iconColor: Colors.white,
                 title: 'Login with Google',
               ),
               const SizedBox(height: 10),
@@ -82,19 +74,19 @@ class HomePage extends StatelessWidget {
               ),
               const SizedBox(height: 10),
 
-              /// WhatsApp Login Button
-              FlutterSocialButton(
-                onTap: () {},
-                buttonType: ButtonType.whatsapp,
-                title: 'Login with WhatsApp',
-              ),
-              const SizedBox(height: 10),
-
               /// Instagram Login Button
               FlutterSocialButton(
                 onTap: () {},
                 mini: false,
                 buttonType: ButtonType.instagram,
+                title: 'Instagram',
+              ),
+
+              /// Instagram Login Button
+              FlutterSocialButton(
+                onTap: () {},
+                mini: false,
+                buttonType: ButtonType.youtube,
                 title: 'Instagram',
               ),
               const SizedBox(height: 10),
@@ -150,7 +142,7 @@ class HomePage extends StatelessWidget {
                   FlutterSocialButton(
                     onTap: () {},
                     mini: true,
-                    buttonType: ButtonType.instagram,
+                    buttonType: ButtonType.twitter,
                     title: 'Instagram',
                   ),
                 ],

@@ -1,54 +1,86 @@
 import 'package:flutter/material.dart';
 
-// Constants for button colors
 class ButtonColors {
-  // Facebook button color (blue)
-  static const Color facebook = Color(0xff39579A);
+  // Apple color
+  static const Color apple = Color(0xFF000000); // Apple black
 
-  // Twitter button color (black)
-  static const Color twitter = Color(0xff000000);
+  // Yahoo color
+  static const Color yahoo = Color(0xFF410093); // Yahoo purple
 
-  // WhatsApp button color (green)
-  static const Color whatsapp = Color(0xff075E54);
+  // Facebook color
+  static const Color facebook = Color(0xFF1877F2); // Facebook blue
 
-  // LinkedIn button color (blue)
-  static const Color linkedin = Color(0xff0085E0);
+  // Google color
+  static const Color google = Color(0xFF4285F4); // Google blue
 
-  // GitHub button color (dark gray)
-  static const Color github = Color(0xff202020);
+  // Twitter (X) color
+  static const Color x = Color(0xFF14171A); // Twitter blue
 
-  // Apple button color (black)
-  static const Color apple = Color(0xff000000);
+  // LinkedIn color
+  static const Color linkedin = Color(0xFF0077B5); // LinkedIn blue
 
-  // Google button color (red-orange)
-  static const Color google = Color(0xffDF4A32);
+  // WhatsApp color
+  static const Color whatsapp = Color(0xFF25D366); // WhatsApp green
 
-  // Yahoo button color (purple)
-  static const Color yahoo = Color(0xff773291);
+  // GitHub color
+  static const Color github = Color(0xFF24292F); // GitHub dark gray
 
-  // Phone button color (grayish blue)
-  static const Color phone = Color(0xff455a64);
+  // Phone color (standard phone icon color)
+  static const Color phone =
+      Color(0xFF34B7F1); // Light blue (common for phone buttons)
 
-  // Email button color (dark brown)
-  static const Color email = Color(0xff3F2F12);
+  // Instagram color
+  static const Color instagram = Color(0xFFDD2A7B); // Instagram pink
 
-  // Instagram button color (solid pinkish red)
-  static const Color instagram = Color(0xFFE1306C);
+  // Email color (standard for email icon)
+  static const Color email = Color(0xFF4285F4); // Google blue
 
-/*
-    // Instagram Gradient (Commented out for now)
-    // A gradient color set for Instagram button to give it a gradient effect.
-    static const LinearGradient instagramGradient = LinearGradient(
-      begin: Alignment.topLeft,
-      end: Alignment.bottomRight,
-      colors: [
-        Color(0xFF405DE6), // Blue
-        Color(0xFF5851DB), // Light Purple
-        Color(0xFF833AB4), // Purple
-        Color(0xFFC13584), // Pink
-        Color(0xFFE1306C), // Instagram Pinkish Red
-        Color(0xFFFD1D1D), // Red
-      ],
-    );
-  */
+  // YouTube color
+  static const Color youtube = Color(0xFFFF0000); // YouTube red
+
+  // Snapchat color
+  static const Color snapchat = Color(0xFFFFFC00); // Snapchat yellow
+
+  // Pinterest color
+  static const Color pinterest = Color(0xFFE60023); // Pinterest red
+
+  // TikTok color
+  static const Color tiktok = Color(0xFF69C9D0); // TikTok teal
+  static const Color tiktokRed = Color(0xFFEE1D52); // TikTok red
+
+  // Reddit color
+  static const Color reddit = Color(0xFFFF4500); // Reddit orange
+
+  // Tumblr color
+  static const Color tumblr = Color(0xFF35465C); // Tumblr dark blue
+
+  // Skype color
+  static const Color skype = Color(0xFF00AFF0); // Skype blue
+
+  // Viber color
+  static const Color viber = Color(0xFF665CAC); // Viber purple
+
+  // Discord color
+  static const Color discord = Color(0xFF5865F2); // Discord blue
+
+  // WeChat color
+  static const Color wechat = Color(0xFF1AAD19); // WeChat green
+
+  // Line color
+  static const Color line = Color(0xFF00C300); // Line green
+
+  // Quora color
+  static const Color quora = Color(0xFFB92B27); // Quora red
+
+  // Twitch color
+  static const Color twitch = Color(0xFF9146FF); // Twitch purple
+
+  // Flickr color
+  static const Color flickr = Color(0xFF0063DC); // Flickr blue
+
+  // Yelp color
+  static const Color yelp = Color(0xFFD32323); // Yelp red
+
+  // Spotify color
+  static const Color spotify = Color(0xFF1DB954); // Spotify green
 }

@@ -6,7 +6,7 @@ enum ButtonType {
   // Google button type
   google,
 
-  // Twitter button type
+  // Twitter button type (X)
   twitter,
 
   // LinkedIn button type
@@ -31,5 +31,53 @@ enum ButtonType {
   email,
 
   // Instagram button type
-  instagram
+  instagram,
+
+  // YouTube button type
+  youtube,
+
+  // Snapchat button type
+  snapchat,
+
+  // Pinterest button type
+  pinterest,
+
+  // TikTok button type
+  tiktok,
+
+  // Reddit button type
+  reddit,
+
+  // Tumblr button type
+  tumblr,
+
+  // Skype button type
+  skype,
+
+  // Viber button type
+  viber,
+
+  // Discord button type
+  discord,
+
+  // WeChat button type
+  wechat,
+
+  // Line button type
+  line,
+
+  // Quora button type
+  quora,
+
+  // Twitch button type
+  twitch,
+
+  // Flickr button type
+  flickr,
+
+  // Yelp button type
+  yelp,
+
+  // Spotify button type
+  spotify
 }

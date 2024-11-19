@@ -1,30 +1,32 @@
 <h1 align="center">Flutter Social Button</h1>
 
-## Flutter Social Button
+# Flutter Social Button
 
-[![pub package](https://img.shields.io/pub/v/flutter_social_button.svg)](https://pub.dev/packages/flutter_social_button)
-[![pub points](https://img.shields.io/pub/likes/flutter_social_button?logo=dart)](https://pub.dev/packages/flutter_social_button)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-in-0e76a8)](https://www.linkedin.com/in/alok-dubey-02ba331b6)
-[![Instagram](https://img.shields.io/badge/Instagram-E4405F?logo=instagram&logoColor=white)](https://www.instagram.com/flutter_coding_/)
-[![Facebook](https://img.shields.io/badge/Facebook-1877F2?logo=facebook&logoColor=white)](https://www.facebook.com/dalok2811/)
-[![Youtube](https://img.shields.io/badge/YouTube-FF0000?logo=youtube&logoColor=white)](https://www.youtube.com/channel/UC7S6rSRNON1_YvKgiUjfyIw)
+[![pub package](https://img.shields.io/pub/v/flutter_social_button.svg)](https://pub.dev/packages/flutter_social_button)  
+[![pub points](https://img.shields.io/pub/likes/flutter_social_button?logo=dart)](https://pub.dev/packages/flutter_social_button)  
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-in-0e76a8)](https://www.linkedin.com/in/alok-dubey-02ba331b6)  
+[![Instagram](https://img.shields.io/badge/Instagram-E4405F?logo=instagram&logoColor=white)](https://www.instagram.com/flutter_coding_/)  
+[![Facebook](https://img.shields.io/badge/Facebook-1877F2?logo=facebook&logoColor=white)](https://www.facebook.com/dalok2811/)  
+[![YouTube](https://img.shields.io/badge/YouTube-FF0000?logo=youtube&logoColor=white)](https://www.youtube.com/channel/UC7S6rSRNON1_YvKgiUjfyIw)
+
+---
 
 ## Features
 
-Flutter Social Button is a flutter package to create social media login buttons easily to any flutter app.
-<br>
-## Getting started
+Flutter Social Button is a Flutter package to easily add social media buttons to your app. Buttons are customizable, and the package supports a wide range of social platforms.
 
-Add the dependency in pubsec.yaml file.
+---
 
+## Getting Started
+
+Add the following dependency to your `pubspec.yaml` file:
+
+```yaml
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_social_button: ^latest_version
 ```
-dart
-  dependencies:
-    flutter:
-      sdk: flutter
-    flutter_social_button: any
-```
-
 
 ## Usage Example
 
@@ -77,12 +79,30 @@ import 'package:flutter_social_button/flutter_social_button.dart';
 - Google
 - Yahoo
 - Twitter
-- Linkedin
-- Whatsapp
+- LinkedIn
+- WhatsApp
 - Apple
-- Github
+- GitHub
 - Phone
 - Email
+- Instagram
+- YouTube
+- Snapchat
+- Pinterest
+- TikTok
+- Reddit
+- Tumblr
+- Skype
+- Viber
+- Discord
+- WeChat
+- Line
+- Quora
+- Twitch
+- Flickr
+- Yelp
+- Spotify
+
 
 
 ## Example

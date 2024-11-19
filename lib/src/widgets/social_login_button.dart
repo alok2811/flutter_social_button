@@ -1,36 +1,22 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_social_button/flutter_social_button.dart';
+import 'package:flutter_social_button/flutter_social_button.dart'; // For icons
 
 // A widget that provides different social login buttons based on ButtonType
 class FlutterSocialButton extends StatelessWidget {
-  // Callback function when the button is tapped
-  final VoidCallback onTap;
+  final VoidCallback onTap; // Callback function when the button is tapped
+  final ButtonType
+      buttonType; // The type of social button (e.g., Facebook, Google, etc.)
+  final Color iconColor; // Icon color for the button
+  final bool
+      mini; // Boolean to determine if the button is mini (round) or normal
+  final String?
+      title; // Optional title for the button (e.g., 'Login with Facebook')
+  final double iconSize; // Size of the icon on the button
+  final bool
+      showLabel; // Boolean to control whether the label is displayed or not
+  final TextStyle? titleStyle; // Optional text style for the title/label
+  final Widget? customIcon; // Optional custom icon for the button
 
-  // The type of social button (e.g., Facebook, Google, etc.)
-  final ButtonType buttonType;
-
-  // Icon color for the button
-  final Color iconColor;
-
-  // Boolean to determine if the button is mini (round) or normal
-  final bool mini;
-
-  // Optional title for the button (e.g., 'Login with Facebook')
-  final String? title;
-
-  // Size of the icon on the button
-  final double iconSize;
-
-  // Boolean to control whether the label is displayed or not
-  final bool showLabel;
-
-  // Optional text style for the title/label
-  final TextStyle? titleStyle;
-
-  // Optional custom icon for the button
-  final Widget? customIcon;
-
-  // Constructor for the FlutterSocialButton widget with named parameters
   const FlutterSocialButton({
     Key? key,
     required this.onTap, // Required onTap callback
@@ -44,14 +30,13 @@ class FlutterSocialButton extends StatelessWidget {
     this.customIcon, // Optional custom icon
   }) : super(key: key);
 
-  // Returns a SocialButton widget with the given parameters
   Widget _buildSocialButton({
-    required Color buttonColor, // Button color
-    required Widget icon, // Icon to be displayed
-    required String label, // Label text for the button
-    required VoidCallback onTap, // Action when the button is tapped
-    TextStyle? titleStyle, // Optional title style
-    bool showLabel = true, // Whether to show the label or not
+    required Color buttonColor,
+    required Widget icon,
+    required String label,
+    required VoidCallback onTap,
+    TextStyle? titleStyle,
+    bool showLabel = true,
   }) {
     return SocialButton(
       onTap: onTap,
@@ -67,171 +52,277 @@ class FlutterSocialButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Switch statement to create the correct button based on the ButtonType
     switch (buttonType) {
       case ButtonType.apple:
-        // Apple login button
         return _buildSocialButton(
-          buttonColor: ButtonColors.apple, // Apple button color
+          buttonColor: ButtonColors.apple,
           icon: customIcon ??
-              Icon(
-                FontAwesomeIcons.apple, // Default Apple icon
-                color: iconColor,
-                size: iconSize,
-              ),
-          label: title ??
-              'Login With Apple', // Default label if no title is provided
+              Icon(FontAwesomeIcons.apple, color: iconColor, size: iconSize),
+          label: title ?? 'Login With Apple',
           onTap: onTap,
-          titleStyle: titleStyle, // Custom title style if provided
+          titleStyle: titleStyle,
         );
 
       case ButtonType.yahoo:
-        // Yahoo login button
         return _buildSocialButton(
-          buttonColor: ButtonColors.yahoo, // Yahoo button color
+          buttonColor: ButtonColors.yahoo,
           icon: customIcon ??
-              Icon(
-                FontAwesomeIcons.yahoo, // Default Yahoo icon
-                color: iconColor,
-                size: iconSize,
-              ),
+              Icon(FontAwesomeIcons.yahoo, color: iconColor, size: iconSize),
           label: title ?? 'Login With Yahoo!',
           onTap: onTap,
           titleStyle: titleStyle,
         );
 
       case ButtonType.facebook:
-        // Facebook login button
         return _buildSocialButton(
-          buttonColor: ButtonColors.facebook, // Facebook button color
+          buttonColor: ButtonColors.facebook,
           icon: customIcon ??
-              Icon(
-                FontAwesomeIcons.facebookF, // Default Facebook icon
-                color: iconColor,
-                size: iconSize,
-              ),
+              Icon(FontAwesomeIcons.facebookF,
+                  color: iconColor, size: iconSize),
           label: title ?? 'Login With Facebook',
           onTap: onTap,
           titleStyle: titleStyle,
         );
 
       case ButtonType.google:
-        // Google login button
         return _buildSocialButton(
-          buttonColor: ButtonColors.google, // Google button color
+          buttonColor: ButtonColors.google,
           icon: customIcon ??
-              Icon(
-                FontAwesomeIcons.google, // Default Google icon
-                color: iconColor,
-                size: iconSize,
-              ),
+              Icon(FontAwesomeIcons.googlePlusG,
+                  color: iconColor, size: iconSize),
           label: title ?? 'Login With Google',
           onTap: onTap,
           titleStyle: titleStyle,
         );
 
       case ButtonType.twitter:
-        // Twitter login button (now X)
         return _buildSocialButton(
-          buttonColor: ButtonColors.twitter, // Twitter button color
+          buttonColor: ButtonColors.x,
           icon: customIcon ??
-              Icon(
-                FontAwesomeIcons.x, // Default Twitter (X) icon
-                color: iconColor,
-                size: iconSize,
-              ),
+              Icon(FontAwesomeIcons.x, color: iconColor, size: iconSize),
           label: title ?? 'Login With X',
           onTap: onTap,
           titleStyle: titleStyle,
         );
 
       case ButtonType.linkedin:
-        // LinkedIn login button
         return _buildSocialButton(
-          buttonColor: ButtonColors.linkedin, // LinkedIn button color
+          buttonColor: ButtonColors.linkedin,
           icon: customIcon ??
-              Icon(
-                FontAwesomeIcons.linkedin, // Default LinkedIn icon
-                color: iconColor,
-                size: iconSize,
-              ),
-          label: title ?? 'Login with Linkedin',
+              Icon(FontAwesomeIcons.linkedin, color: iconColor, size: iconSize),
+          label: title ?? 'Login With LinkedIn',
           onTap: onTap,
           titleStyle: titleStyle,
         );
 
       case ButtonType.whatsapp:
-        // WhatsApp login button
         return _buildSocialButton(
-          buttonColor: ButtonColors.whatsapp, // WhatsApp button color
+          buttonColor: ButtonColors.whatsapp,
           icon: customIcon ??
-              Icon(
-                FontAwesomeIcons.whatsapp, // Default WhatsApp icon
-                color: iconColor,
-                size: iconSize,
-              ),
-          label: title ?? 'Login With Whatsapp',
+              Icon(FontAwesomeIcons.whatsapp, color: iconColor, size: iconSize),
+          label: title ?? 'Login With WhatsApp',
           onTap: onTap,
           titleStyle: titleStyle,
         );
 
       case ButtonType.github:
-        // GitHub login button
         return _buildSocialButton(
-          buttonColor: ButtonColors.github, // GitHub button color
+          buttonColor: ButtonColors.github,
           icon: customIcon ??
-              Icon(
-                FontAwesomeIcons.github, // Default GitHub icon
-                color: iconColor,
-                size: iconSize,
-              ),
-          label: title ?? 'Login With Github',
+              Icon(FontAwesomeIcons.github, color: iconColor, size: iconSize),
+          label: title ?? 'Login With GitHub',
           onTap: onTap,
           titleStyle: titleStyle,
         );
 
       case ButtonType.phone:
-        // Phone login button
         return _buildSocialButton(
-          buttonColor: ButtonColors.phone, // Phone button color
+          buttonColor: ButtonColors.phone,
           icon: customIcon ??
-              Icon(
-                Icons.phone_android, // Default phone icon
-                color: iconColor,
-                size: iconSize,
-              ),
+              Icon(Icons.phone_android, color: iconColor, size: iconSize),
           label: title ?? 'Login With Phone',
           onTap: onTap,
           titleStyle: titleStyle,
         );
 
       case ButtonType.instagram:
-        // Instagram login button
         return _buildSocialButton(
-          buttonColor: ButtonColors.instagram, // Instagram button color
+          buttonColor: ButtonColors.instagram,
           icon: customIcon ??
-              Icon(
-                FontAwesomeIcons.instagram, // Default Instagram icon
-                color: iconColor,
-                size: iconSize,
-              ),
+              Icon(FontAwesomeIcons.instagram,
+                  color: iconColor, size: iconSize),
           label: title ?? 'Login With Instagram',
           onTap: onTap,
           titleStyle: titleStyle,
-          showLabel: showLabel, // Control label visibility for Instagram
+        );
+
+      case ButtonType.snapchat:
+        return _buildSocialButton(
+          buttonColor: ButtonColors.snapchat,
+          icon: customIcon ??
+              Icon(FontAwesomeIcons.snapchatGhost,
+                  color: iconColor, size: iconSize),
+          label: title ?? 'Login With Snapchat',
+          onTap: onTap,
+          titleStyle: titleStyle,
+        );
+
+      case ButtonType.pinterest:
+        return _buildSocialButton(
+          buttonColor: ButtonColors.pinterest,
+          icon: customIcon ??
+              Icon(FontAwesomeIcons.pinterest,
+                  color: iconColor, size: iconSize),
+          label: title ?? 'Login With Pinterest',
+          onTap: onTap,
+          titleStyle: titleStyle,
+        );
+
+      case ButtonType.tiktok:
+        return _buildSocialButton(
+          buttonColor: ButtonColors.tiktok,
+          icon: customIcon ??
+              Icon(FontAwesomeIcons.tiktok, color: iconColor, size: iconSize),
+          label: title ?? 'Login With TikTok',
+          onTap: onTap,
+          titleStyle: titleStyle,
+        );
+
+      case ButtonType.reddit:
+        return _buildSocialButton(
+          buttonColor: ButtonColors.reddit,
+          icon: customIcon ??
+              Icon(FontAwesomeIcons.reddit, color: iconColor, size: iconSize),
+          label: title ?? 'Login With Reddit',
+          onTap: onTap,
+          titleStyle: titleStyle,
+        );
+
+      case ButtonType.discord:
+        return _buildSocialButton(
+          buttonColor: ButtonColors.discord,
+          icon: customIcon ??
+              Icon(FontAwesomeIcons.discord, color: iconColor, size: iconSize),
+          label: title ?? 'Login With Discord',
+          onTap: onTap,
+          titleStyle: titleStyle,
+        );
+
+      case ButtonType.wechat:
+        return _buildSocialButton(
+          buttonColor: ButtonColors.wechat,
+          icon: customIcon ??
+              Icon(FontAwesomeIcons.weixin, color: iconColor, size: iconSize),
+          label: title ?? 'Login With WeChat',
+          onTap: onTap,
+          titleStyle: titleStyle,
+        );
+
+      case ButtonType.line:
+        return _buildSocialButton(
+          buttonColor: ButtonColors.line,
+          icon: customIcon ??
+              Icon(FontAwesomeIcons.line, color: iconColor, size: iconSize),
+          label: title ?? 'Login With Line',
+          onTap: onTap,
+          titleStyle: titleStyle,
+        );
+
+      case ButtonType.quora:
+        return _buildSocialButton(
+          buttonColor: ButtonColors.quora,
+          icon: customIcon ??
+              Icon(FontAwesomeIcons.quora, color: iconColor, size: iconSize),
+          label: title ?? 'Login With Quora',
+          onTap: onTap,
+          titleStyle: titleStyle,
+        );
+
+      case ButtonType.twitch:
+        return _buildSocialButton(
+          buttonColor: ButtonColors.twitch,
+          icon: customIcon ??
+              Icon(FontAwesomeIcons.twitch, color: iconColor, size: iconSize),
+          label: title ?? 'Login With Twitch',
+          onTap: onTap,
+          titleStyle: titleStyle,
+        );
+
+      case ButtonType.flickr:
+        return _buildSocialButton(
+          buttonColor: ButtonColors.flickr,
+          icon: customIcon ??
+              Icon(FontAwesomeIcons.flickr, color: iconColor, size: iconSize),
+          label: title ?? 'Login With Flickr',
+          onTap: onTap,
+          titleStyle: titleStyle,
+        );
+
+      case ButtonType.spotify:
+        return _buildSocialButton(
+          buttonColor: ButtonColors.spotify,
+          icon: customIcon ??
+              Icon(FontAwesomeIcons.spotify, color: iconColor, size: iconSize),
+          label: title ?? 'Login With Spotify',
+          onTap: onTap,
+          titleStyle: titleStyle,
+        );
+      case ButtonType.youtube:
+        return _buildSocialButton(
+          buttonColor: ButtonColors.youtube,
+          icon: customIcon ??
+              Icon(FontAwesomeIcons.youtube, color: iconColor, size: iconSize),
+          label: title ?? 'Login With YouTube',
+          onTap: onTap,
+          titleStyle: titleStyle,
+        );
+
+      case ButtonType.tumblr:
+        return _buildSocialButton(
+          buttonColor: ButtonColors.tumblr,
+          icon: customIcon ??
+              Icon(FontAwesomeIcons.tumblr, color: iconColor, size: iconSize),
+          label: title ?? 'Login With Tumblr',
+          onTap: onTap,
+          titleStyle: titleStyle,
+        );
+
+      case ButtonType.skype:
+        return _buildSocialButton(
+          buttonColor: ButtonColors.skype,
+          icon: customIcon ??
+              Icon(FontAwesomeIcons.skype, color: iconColor, size: iconSize),
+          label: title ?? 'Login With Skype',
+          onTap: onTap,
+          titleStyle: titleStyle,
+        );
+
+      case ButtonType.viber:
+        return _buildSocialButton(
+          buttonColor: ButtonColors.viber,
+          icon: customIcon ??
+              Icon(FontAwesomeIcons.viber, color: iconColor, size: iconSize),
+          label: title ?? 'Login With Viber',
+          onTap: onTap,
+          titleStyle: titleStyle,
+        );
+
+      case ButtonType.yelp:
+        return _buildSocialButton(
+          buttonColor: ButtonColors.yelp,
+          icon: customIcon ??
+              Icon(FontAwesomeIcons.yelp, color: iconColor, size: iconSize),
+          label: title ?? 'Login With Yelp',
+          onTap: onTap,
+          titleStyle: titleStyle,
         );
 
       default:
-        // Default to email login button
         return _buildSocialButton(
-          buttonColor: ButtonColors.email, // Email button color
-          icon: customIcon ??
-              Icon(
-                Icons.email, // Default Email icon
-                color: iconColor,
-                size: iconSize,
-              ),
-          label: title ?? 'Login With Email', // Default label for email
+          buttonColor: ButtonColors.email,
+          icon:
+              customIcon ?? Icon(Icons.email, color: iconColor, size: iconSize),
+          label: title ?? 'Login With Email',
           onTap: onTap,
           titleStyle: titleStyle,
         );
