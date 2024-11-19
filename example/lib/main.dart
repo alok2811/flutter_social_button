@@ -8,11 +8,10 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Flutter Social Buttons',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -28,7 +27,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Social Buttons"),
+        title: const Text("Social Login Buttons"),
         centerTitle: true,
       ),
       body: Center(
@@ -36,103 +35,126 @@ class HomePage extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              //For default Button
+              // Default Email Button
               FlutterSocialButton(
                 onTap: () {},
+                title: 'Login with Email',
               ),
-              const SizedBox(
-                height: 2,
-              ),
+              const SizedBox(height: 10),
 
-              //For default Button
+              /// Yahoo Login Button
               FlutterSocialButton(
                 onTap: () {},
                 buttonType: ButtonType.yahoo,
+                title: 'Login with Yahoo!',
               ),
-              const SizedBox(
-                height: 2,
-              ),
+              const SizedBox(height: 10),
 
-
-              //For facebook Button
+              /// Facebook Login Button
               FlutterSocialButton(
                 onTap: () {},
                 buttonType: ButtonType.facebook,
+                title: 'Login with Facebook',
               ),
-              const SizedBox(
-                height: 2,
-              ),
+              const SizedBox(height: 10),
 
-              //For google Button
+              /// Google Login Button with Black icon
               FlutterSocialButton(
                 onTap: () {},
                 buttonType: ButtonType.google,
                 iconColor: Colors.black,
+                title: 'Login with Google',
               ),
-              const SizedBox(
-                height: 2,
-              ),
+              const SizedBox(height: 10),
 
-              //For phone Button
+              /// Apple Login Button
               FlutterSocialButton(
                 onTap: () {},
                 buttonType: ButtonType.apple,
+                title: 'Login with Apple',
               ),
 
-              //For phone Button
+              /// Phone Login Button
               FlutterSocialButton(
                 onTap: () {},
                 buttonType: ButtonType.phone,
+                title: 'Login with Phone',
               ),
+              const SizedBox(height: 10),
 
-              const SizedBox(
-                height: 2,
-              ),
-
-              //For Whatsapp Button
+              /// WhatsApp Login Button
               FlutterSocialButton(
                 onTap: () {},
                 buttonType: ButtonType.whatsapp,
+                title: 'Login with WhatsApp',
               ),
-              const SizedBox(
-                height: 2,
-              ),
+              const SizedBox(height: 10),
 
+              /// Instagram Login Button
+              FlutterSocialButton(
+                onTap: () {},
+                mini: false,
+                buttonType: ButtonType.instagram,
+                title: 'Instagram',
+              ),
+              const SizedBox(height: 10),
               const Divider(
                 color: Colors.black,
                 thickness: 2.5,
               ),
 
+              // Row of Mini Social Buttons
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
+                  /// Mini Email Button
                   FlutterSocialButton(
                     onTap: () {},
                     mini: true,
+                    title: 'Email',
                   ),
+
+                  /// Mini Facebook Button
                   FlutterSocialButton(
                     onTap: () {},
                     mini: true,
                     buttonType: ButtonType.facebook,
+                    title: 'Facebook',
                   ),
+
+                  /// Mini Google Button
                   FlutterSocialButton(
                     onTap: () {},
                     mini: true,
                     buttonType: ButtonType.google,
+                    title: 'Google',
                   ),
+
+                  /// Mini Phone Button
                   FlutterSocialButton(
                     onTap: () {},
                     mini: true,
                     buttonType: ButtonType.phone,
+                    title: 'Phone',
                   ),
 
+                  /// Mini Yahoo Button
                   FlutterSocialButton(
                     onTap: () {},
                     mini: true,
                     buttonType: ButtonType.yahoo,
+                    title: 'Yahoo!',
+                  ),
+
+                  /// Mini Instagram Button
+                  FlutterSocialButton(
+                    onTap: () {},
+                    mini: true,
+                    buttonType: ButtonType.instagram,
+                    title: 'Instagram',
                   ),
                 ],
-              )
+              ),
             ],
           ),
         ),
