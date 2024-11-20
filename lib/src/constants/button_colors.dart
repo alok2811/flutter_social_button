@@ -1,4 +1,5 @@
 import 'package:flutter_social_button/flutter_social_button.dart';
+export 'package:flutter/material.dart';
 
 class ButtonColors {
   /// Private static instance of the ButtonColors class

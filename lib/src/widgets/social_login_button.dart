@@ -10,8 +10,8 @@ class FlutterSocialButton extends StatelessWidget {
   /// The icon color for the button.
   final Color iconColor;
 
-  /*  /// Determines if the button is a mini (circular) or normal (rectangular).
-  final bool mini;*/
+  /// Determines if the button is a mini (circular) or normal (rectangular).
+  final bool mini;
 
   /// The title of the button (e.g., 'Login with Facebook').
   final String? title;
@@ -69,6 +69,7 @@ class FlutterSocialButton extends StatelessWidget {
     this.width,
     this.height,
     this.padding,
+    this.mini = false,
     this.borderRadius,
     this.elevation = 2.0,
     this.borderColor,
@@ -357,6 +358,7 @@ class FlutterSocialButton extends StatelessWidget {
       icon: _getIcon(),
       buttonColor: customButtonColor ?? _getColor(),
       label: title ?? '',
+      mini: mini,
       titleStyle: titleStyle,
       iconSize: iconSize,
       showLabel: showLabel,

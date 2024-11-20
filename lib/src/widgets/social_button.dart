@@ -42,6 +42,7 @@ class SocialButton extends StatelessWidget {
 
   /// Optional height for the button.
   final double? height;
+  final bool mini;
 
   /// Enum to define the button style (circle or square).
   final CustomButtonStyle buttonStyle;
@@ -57,6 +58,7 @@ class SocialButton extends StatelessWidget {
     /// Icon widget for the button
     required this.buttonColor, // Background color
     required this.label,
+    required this.mini,
 
     /// Label text
     this.titleStyle,
@@ -151,7 +153,7 @@ class SocialButton extends StatelessWidget {
         ),
         child: Center(
           /// Centers the content inside the button
-          child: buttonStyle == CustomButtonStyle.circle
+          child: buttonStyle == CustomButtonStyle.circle || mini
               ? icon
 
               /// Only display the icon for circle button

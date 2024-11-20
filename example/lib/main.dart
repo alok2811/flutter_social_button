@@ -117,7 +117,8 @@ class HomePage extends StatelessWidget {
                     onTap: () {},
                     buttonType: ButtonType.phone,
                     title: 'Phone',
-                    buttonStyle: CustomButtonStyle.circle,
+                    buttonStyle: CustomButtonStyle.square,
+                    mini: true,
                   ),
 
                   /// Mini Yahoo Button
@@ -125,7 +126,10 @@ class HomePage extends StatelessWidget {
                     onTap: () {},
                     buttonType: ButtonType.yahoo,
                     title: 'Yahoo!',
-                    showLabel: false,
+                    showLabel: true,
+                    width: 200,
+                    mini: true,
+                    iconSize: 35,
                   ),
 
                   /// Mini Instagram Button
