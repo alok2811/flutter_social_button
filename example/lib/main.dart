@@ -77,7 +77,6 @@ class HomePage extends StatelessWidget {
               /// Instagram Login Button
               FlutterSocialButton(
                 onTap: () {},
-                mini: false,
                 buttonType: ButtonType.instagram,
                 title: 'Instagram',
               ),
@@ -85,7 +84,6 @@ class HomePage extends StatelessWidget {
               /// Instagram Login Button
               FlutterSocialButton(
                 onTap: () {},
-                mini: false,
                 buttonType: ButtonType.youtube,
                 title: 'Instagram',
               ),
@@ -99,49 +97,40 @@ class HomePage extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
+                  SizedBox(
+                    width: 10,
+                  ),
+
                   /// Mini Email Button
                   FlutterSocialButton(
                     onTap: () {},
-                    mini: true,
+                    buttonStyle: CustomButtonStyle.circle,
                     title: 'Email',
+                    showLabel: false,
                   ),
-
-                  /// Mini Facebook Button
-                  FlutterSocialButton(
-                    onTap: () {},
-                    mini: true,
-                    buttonType: ButtonType.facebook,
-                    title: 'Facebook',
-                  ),
-
-                  /// Mini Google Button
-                  FlutterSocialButton(
-                    onTap: () {},
-                    mini: true,
-                    buttonType: ButtonType.google,
-                    title: 'Google',
+                  SizedBox(
+                    width: 10,
                   ),
 
                   /// Mini Phone Button
                   FlutterSocialButton(
                     onTap: () {},
-                    mini: true,
                     buttonType: ButtonType.phone,
                     title: 'Phone',
+                    buttonStyle: CustomButtonStyle.circle,
                   ),
 
                   /// Mini Yahoo Button
                   FlutterSocialButton(
                     onTap: () {},
-                    mini: true,
                     buttonType: ButtonType.yahoo,
                     title: 'Yahoo!',
+                    showLabel: false,
                   ),
 
                   /// Mini Instagram Button
                   FlutterSocialButton(
                     onTap: () {},
-                    mini: true,
                     buttonType: ButtonType.twitter,
                     title: 'Instagram',
                   ),

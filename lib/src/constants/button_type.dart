@@ -79,5 +79,9 @@ enum ButtonType {
   yelp,
 
   // Spotify button type
-  spotify
+  spotify,
+  website
 }
+
+// Enum for ButtonStyle
+enum CustomButtonStyle { circle, square }

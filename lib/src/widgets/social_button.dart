@@ -1,95 +1,124 @@
-import 'package:flutter/material.dart';
+import 'package:flutter_social_button/flutter_social_button.dart';
 
-// A reusable button widget for social media platforms
 class SocialButton extends StatelessWidget {
-  // Callback function when the button is tapped
+  /// Callback function when the button is tapped.
   final VoidCallback onTap;
 
-  // Icon to be displayed on the button
+  /// Icon to be displayed on the button.
   final Widget icon;
 
-  // Background color of the button
+  /// Background color of the button.
   final Color buttonColor;
 
-  // Text label displayed on the button
+  /// Text label displayed on the button.
   final String label;
 
-  // Optional text style for the label
+  /// Optional text style for the label.
   final TextStyle? titleStyle;
 
-  // Boolean to determine if the button is mini (round) or normal
-  final bool mini;
-
-  // Size of the icon on the button
+  /// Size of the icon on the button.
   final double iconSize;
 
-  // Boolean to control whether the label is displayed or not
+  /// Boolean to control whether the label is displayed or not.
   final bool showLabel;
 
-  // Optional border radius for the button
+  /// Optional border radius for the button (applies to square style only).
   final BorderRadius? borderRadius;
 
-  // Optional padding for the button
+  /// Optional padding for the button.
   final EdgeInsets? padding;
 
-  // Constructor with named parameters for customization
+  /// Optional elevation for the button.
+  final double? elevation;
+
+  /// Optional border color for the button.
+  final Color? borderColor;
+
+  /// Optional border width for the button.
+  final double? borderWidth;
+
+  /// Optional width for the button.
+  final double? width;
+
+  /// Optional height for the button.
+  final double? height;
+
+  /// Enum to define the button style (circle or square).
+  final CustomButtonStyle buttonStyle;
+
   const SocialButton({
     Key? key,
-    required this.onTap, // Required onTap callback
-    required this.icon, // Required icon widget
-    required this.buttonColor, // Required button background color
-    required this.label, // Required label text
-    this.titleStyle, // Optional title style
-    this.mini = false, // Defaults to false (normal button size)
-    this.iconSize = 24.0, // Defaults to 24.0 for icon size
-    this.showLabel = true, // Defaults to true (label will be shown)
-    this.borderRadius, // Optional border radius
-    this.padding, // Optional padding
+    required this.onTap,
+    required this.icon,
+    required this.buttonColor,
+    required this.label,
+    this.titleStyle,
+    this.iconSize = 24.0,
+    this.showLabel = true,
+    this.borderRadius,
+    this.padding,
+    this.elevation = 2.0,
+    this.borderColor,
+    this.borderWidth = 0.0,
+    this.width,
+    this.height,
+    this.buttonStyle = CustomButtonStyle.square,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    // If 'mini' is true, create a round button with just an icon
-    return mini
-        ? ElevatedButton(
-            onPressed: onTap,
-            style: ElevatedButton.styleFrom(
-              shape: const CircleBorder(), // Circular shape for mini button
-              backgroundColor: buttonColor, // Background color for mini button
-              padding: padding ??
-                  const EdgeInsets.all(20), // Padding for mini button
-            ),
-            child: icon, // Icon displayed on the mini button
-          )
-        : Container(
-            padding: padding ??
-                const EdgeInsets.all(20.0), // Padding for normal button
-            width: double.infinity, // Full width for normal button
-            child: ElevatedButton.icon(
-              onPressed: onTap, // Action when button is pressed
-              icon: icon, // Icon displayed on the normal button
-              label: showLabel
-                  ? Text(
-                      label, // Label text displayed on the button
-                      style: titleStyle ??
-                          TextStyle(
-                              fontSize: 16, // Default font size
-                              fontWeight:
-                                  FontWeight.w600, // Default font weight
-                              color: Colors.white), // Default font color
-                    )
-                  : const SizedBox
-                      .shrink(), // Empty widget if label is not shown
-              style: ElevatedButton.styleFrom(
-                padding: const EdgeInsets.all(20), // Padding for normal button
-                backgroundColor:
-                    buttonColor, // Background color for normal button
-                shape: RoundedRectangleBorder(
-                  borderRadius: borderRadius ??
-                      BorderRadius.circular(12), // Button border radius
-                ),
+    // Custom button creation based on style
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        width: width,
+        height: height,
+        padding:
+            padding ?? const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+        decoration: BoxDecoration(
+          color: buttonColor,
+          borderRadius: buttonStyle == CustomButtonStyle.circle
+              ? null
+              : (borderRadius ?? BorderRadius.circular(5)),
+          border: borderColor != null && borderWidth! > 0
+              ? Border.all(color: borderColor!, width: borderWidth!)
+              : null,
+          shape: buttonStyle == CustomButtonStyle.circle
+              ? BoxShape.circle
+              : BoxShape.rectangle,
+          boxShadow: [
+            if (elevation != 0.0)
+              BoxShadow(
+                color: Colors.black.withOpacity(0.2),
+                blurRadius: elevation!,
+                spreadRadius: 1.0,
               ),
-            ),
-          );
+          ],
+        ),
+        child: Center(
+          child: buttonStyle == CustomButtonStyle.circle
+              ? icon
+              : Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    icon,
+                    if (showLabel)
+                      Padding(
+                        padding: const EdgeInsets.only(left: 8.0),
+                        child: Text(
+                          label,
+                          style: titleStyle ??
+                              TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.w600,
+                                color: Colors.white,
+                              ),
+                        ),
+                      ),
+                  ],
+                ),
+        ),
+      ),
+    );
   }
 }
