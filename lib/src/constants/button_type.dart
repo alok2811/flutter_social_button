@@ -1,87 +1,89 @@
-// Enum for ButtonTypes
+/// Enum for ButtonTypes
 enum ButtonType {
-  // Facebook button type
+  /// Facebook button type
   facebook,
 
-  // Google button type
+  /// Google button type
   google,
 
-  // Twitter button type (X)
+  /// Twitter button type (X)
   twitter,
 
-  // LinkedIn button type
+  /// LinkedIn button type
   linkedin,
 
-  // WhatsApp button type
+  /// WhatsApp button type
   whatsapp,
 
-  // Apple button type
+  /// Apple button type
   apple,
 
-  // GitHub button type
+  /// GitHub button type
   github,
 
-  // Yahoo button type
+  /// Yahoo button type
   yahoo,
 
-  // Phone button type
+  /// Phone button type
   phone,
 
-  // Email button type
+  /// Email button type
   email,
 
-  // Instagram button type
+  /// Instagram button type
   instagram,
 
-  // YouTube button type
+  /// YouTube button type
   youtube,
 
-  // Snapchat button type
+  /// Snapchat button type
   snapchat,
 
-  // Pinterest button type
+  /// Pinterest button type
   pinterest,
 
-  // TikTok button type
+  /// TikTok button type
   tiktok,
 
-  // Reddit button type
+  /// Reddit button type
   reddit,
 
-  // Tumblr button type
+  /// Tumblr button type
   tumblr,
 
-  // Skype button type
+  /// Skype button type
   skype,
 
-  // Viber button type
+  /// Viber button type
   viber,
 
-  // Discord button type
+  /// Discord button type
   discord,
 
-  // WeChat button type
+  /// WeChat button type
   wechat,
 
-  // Line button type
+  /// Line button type
   line,
 
-  // Quora button type
+  /// Quora button type
   quora,
 
-  // Twitch button type
+  /// Twitch button type
   twitch,
 
-  // Flickr button type
+  /// Flickr button type
   flickr,
 
-  // Yelp button type
+  /// Yelp button type
   yelp,
 
-  // Spotify button type
+  /// Spotify button type
   spotify,
+
+  /// Website button type
   website
 }
 
-// Enum for ButtonStyle
+/// Enum for ButtonStyle
 enum CustomButtonStyle { circle, square }
