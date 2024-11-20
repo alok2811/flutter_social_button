@@ -26,7 +26,7 @@ class FlutterSocialButton extends StatelessWidget {
   final TextStyle? titleStyle;
 
   /// Custom icon widget for the button.
-  final Widget? customIcon;
+  final Widget? icon;
 
   /// The background color of the button.
   final Color? customButtonColor;
@@ -55,7 +55,8 @@ class FlutterSocialButton extends StatelessWidget {
   final CustomButtonStyle buttonStyle;
 
   const FlutterSocialButton({
-    required this.onTap, super.key,
+    required this.onTap,
+    super.key,
     this.buttonType = ButtonType.email,
     this.iconColor = Colors.white,
     this.title,
@@ -63,7 +64,7 @@ class FlutterSocialButton extends StatelessWidget {
     this.iconSize = 24.0,
     this.showLabel = true,
     this.titleStyle,
-    this.customIcon,
+    this.icon,
     this.customButtonColor,
     this.width,
     this.height,
@@ -204,169 +205,170 @@ class FlutterSocialButton extends StatelessWidget {
       case ButtonType.facebook:
 
         /// If no customIcon is provided, return the Facebook icon from FontAwesome with the specified color and size.
-        return customIcon ??
+        return icon ??
             Icon(FontAwesomeIcons.facebookF, color: iconColor, size: iconSize);
       case ButtonType.google:
 
         /// Return the Google icon from FontAwesome with the specified color and size.
-        return customIcon ??
+        return icon ??
             Icon(FontAwesomeIcons.google, color: iconColor, size: iconSize);
       case ButtonType.twitter:
 
         /// Return the Twitter icon from FontAwesome with the specified color and size.
-        return customIcon ??
+        return icon ??
             Icon(FontAwesomeIcons.twitter, color: iconColor, size: iconSize);
       case ButtonType.linkedin:
 
         /// Return the LinkedIn icon from FontAwesome with the specified color and size.
-        return customIcon ??
+        return icon ??
             Icon(FontAwesomeIcons.linkedin, color: iconColor, size: iconSize);
       case ButtonType.whatsapp:
 
         /// Return the WhatsApp icon from FontAwesome with the specified color and size.
-        return customIcon ??
+        return icon ??
             Icon(FontAwesomeIcons.whatsapp, color: iconColor, size: iconSize);
       case ButtonType.apple:
 
         /// Return the Apple icon from FontAwesome with the specified color and size.
-        return customIcon ??
+        return icon ??
             Icon(FontAwesomeIcons.apple, color: iconColor, size: iconSize);
       case ButtonType.github:
 
         /// Return the GitHub icon from FontAwesome with the specified color and size.
-        return customIcon ??
+        return icon ??
             Icon(FontAwesomeIcons.github, color: iconColor, size: iconSize);
       case ButtonType.yahoo:
 
         /// Return the Yahoo icon from FontAwesome with the specified color and size.
-        return customIcon ??
+        return icon ??
             Icon(FontAwesomeIcons.yahoo, color: iconColor, size: iconSize);
       case ButtonType.phone:
 
         /// Return the Phone icon using Flutter's built-in icon with the specified color and size.
-        return customIcon ??
+        return icon ??
             Icon(Icons.phone_android, color: iconColor, size: iconSize);
       case ButtonType.email:
 
         /// Return the Email icon using Flutter's built-in icon with the specified color and size.
-        return customIcon ??
-            Icon(Icons.email, color: iconColor, size: iconSize);
+        return icon ?? Icon(Icons.email, color: iconColor, size: iconSize);
       case ButtonType.instagram:
 
         /// Return the Instagram icon from FontAwesome with the specified color and size.
-        return customIcon ??
+        return icon ??
             Icon(FontAwesomeIcons.instagram, color: iconColor, size: iconSize);
       case ButtonType.youtube:
 
         /// Return the YouTube icon from FontAwesome with the specified color and size.
-        return customIcon ??
+        return icon ??
             Icon(FontAwesomeIcons.youtube, color: iconColor, size: iconSize);
       case ButtonType.snapchat:
 
         /// Return the Snapchat icon from FontAwesome with the specified color and size.
-        return customIcon ??
+        return icon ??
             Icon(FontAwesomeIcons.snapchat, color: iconColor, size: iconSize);
       case ButtonType.pinterest:
 
         /// Return the Pinterest icon from FontAwesome with the specified color and size.
-        return customIcon ??
+        return icon ??
             Icon(FontAwesomeIcons.pinterest, color: iconColor, size: iconSize);
       case ButtonType.tiktok:
 
         /// Return the TikTok icon from FontAwesome with the specified color and size.
-        return customIcon ??
+        return icon ??
             Icon(FontAwesomeIcons.tiktok, color: iconColor, size: iconSize);
       case ButtonType.reddit:
 
         /// Return the Reddit icon from FontAwesome with the specified color and size.
-        return customIcon ??
-            Icon(FontAwesomeIcons.redditAlien,
-                color: iconColor, size: iconSize,);
+        return icon ??
+            Icon(
+              FontAwesomeIcons.redditAlien,
+              color: iconColor,
+              size: iconSize,
+            );
       case ButtonType.tumblr:
 
         /// Return the Tumblr icon from FontAwesome with the specified color and size.
-        return customIcon ??
+        return icon ??
             Icon(FontAwesomeIcons.tumblr, color: iconColor, size: iconSize);
       case ButtonType.skype:
 
         /// Return the Skype icon from FontAwesome with the specified color and size.
-        return customIcon ??
+        return icon ??
             Icon(FontAwesomeIcons.skype, color: iconColor, size: iconSize);
       case ButtonType.viber:
 
         /// Return the Viber icon from FontAwesome with the specified color and size.
-        return customIcon ??
+        return icon ??
             Icon(FontAwesomeIcons.viber, color: iconColor, size: iconSize);
       case ButtonType.discord:
 
         /// Return the Discord icon from FontAwesome with the specified color and size.
-        return customIcon ??
+        return icon ??
             Icon(FontAwesomeIcons.discord, color: iconColor, size: iconSize);
       case ButtonType.wechat:
 
         /// Return the WeChat icon (weixin) from FontAwesome with the specified color and size.
-        return customIcon ??
+        return icon ??
             Icon(FontAwesomeIcons.weixin, color: iconColor, size: iconSize);
       case ButtonType.line:
 
         /// Return the Line icon from FontAwesome with the specified color and size.
-        return customIcon ??
+        return icon ??
             Icon(FontAwesomeIcons.line, color: iconColor, size: iconSize);
       case ButtonType.quora:
 
         /// Return the Quora icon from FontAwesome with the specified color and size.
-        return customIcon ??
+        return icon ??
             Icon(FontAwesomeIcons.quora, color: iconColor, size: iconSize);
       case ButtonType.twitch:
 
         /// Return the Twitch icon from FontAwesome with the specified color and size.
-        return customIcon ??
+        return icon ??
             Icon(FontAwesomeIcons.twitch, color: iconColor, size: iconSize);
       case ButtonType.flickr:
 
         /// Return the Flickr icon from FontAwesome with the specified color and size.
-        return customIcon ??
+        return icon ??
             Icon(FontAwesomeIcons.flickr, color: iconColor, size: iconSize);
       case ButtonType.yelp:
 
         /// Return the Yelp icon from FontAwesome with the specified color and size.
-        return customIcon ??
+        return icon ??
             Icon(FontAwesomeIcons.yelp, color: iconColor, size: iconSize);
       case ButtonType.spotify:
 
         /// Return the Spotify icon from FontAwesome with the specified color and size.
-        return customIcon ??
+        return icon ??
             Icon(FontAwesomeIcons.spotify, color: iconColor, size: iconSize);
       case ButtonType.website:
 
         /// Return the Website icon using Flutter's built-in icon with the specified color and size.
-        return customIcon ??
-            Icon(Icons.language, color: iconColor, size: iconSize);
+        return icon ?? Icon(Icons.language, color: iconColor, size: iconSize);
       default:
 
         /// Return a default icon (email icon) if no matching button type is found.
-        return customIcon ??
+        return icon ??
             Icon(Icons.email, color: iconColor, size: iconSize); // Default case
     }
   }
 
   @override
   Widget build(BuildContext context) => SocialButton(
-      onTap: onTap,
-      icon: _getIcon(),
-      buttonColor: customButtonColor ?? _getColor(),
-      label: title ?? '',
-      mini: mini,
-      titleStyle: titleStyle,
-      iconSize: iconSize,
-      showLabel: showLabel,
-      padding: padding,
-      borderRadius: borderRadius,
-      elevation: elevation,
-      borderColor: borderColor,
-      borderWidth: borderWidth,
-      width: width,
-      height: height,
-      buttonStyle: buttonStyle,
-    );
+        onTap: onTap,
+        icon: _getIcon(),
+        buttonColor: customButtonColor ?? _getColor(),
+        label: title ?? '',
+        mini: mini,
+        titleStyle: titleStyle,
+        iconSize: iconSize,
+        showLabel: showLabel,
+        padding: padding,
+        borderRadius: borderRadius,
+        elevation: elevation,
+        borderColor: borderColor,
+        borderWidth: borderWidth,
+        width: width,
+        height: height,
+        buttonStyle: buttonStyle,
+      );
 }
