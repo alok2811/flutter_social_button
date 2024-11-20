@@ -18,7 +18,7 @@ linter:
     - prefer_final_fields
     - null_check_on_nullable_type_parameter
     - avoid_private_typedef_functions
-    - prefer_expression_function_bodies
+    #- prefer_expression_function_bodies
     - prefer_function_declarations_over_variables
     - prefer_generic_function_type_aliases
     - use_function_type_syntax_for_parameters
