@@ -78,121 +78,123 @@ class FlutterSocialButton extends StatelessWidget {
   /// A utility function to retrieve the color by ButtonType
   /// A method to return a color based on the button type.
   Color _getColor() {
-    // Use a switch statement to determine which color to return based on the button type.
+    ButtonColors buttonColors = ButtonColors();
+
+    /// Use a switch statement to determine which color to return based on the button type.
     switch (buttonType) {
       case ButtonType.apple:
 
-        /// Return the apple button color from ButtonColors.
-        return ButtonColors.apple;
+        /// Return the apple button color from buttonColors..
+        return buttonColors.apple;
       case ButtonType.yahoo:
 
-        /// Return the yahoo button color from ButtonColors.
-        return ButtonColors.yahoo;
+        /// Return the yahoo button color from buttonColors.
+        return buttonColors.yahoo;
       case ButtonType.facebook:
 
-        /// Return the facebook button color from ButtonColors.
-        return ButtonColors.facebook;
+        /// Return the facebook button color from buttonColors.
+        return buttonColors.facebook;
       case ButtonType.google:
 
-        /// Return the google button color from ButtonColors.
-        return ButtonColors.google;
+        /// Return the google button color from buttonColors.
+        return buttonColors.google;
       case ButtonType.twitter:
 
-        /// Return the twitter button color from ButtonColors.
-        return ButtonColors
-            .x; // 'x' is used here for Twitter, assuming that's the defined color.
+        /// Return the twitter button color from buttonColors.
+        return buttonColors
+            .twitter; // 'x' is used here for Twitter, assuming that's the defined color.
       case ButtonType.linkedin:
 
-        /// Return the linkedin button color from ButtonColors.
-        return ButtonColors.linkedin;
+        /// Return the linkedin button color from buttonColors.
+        return buttonColors.linkedin;
       case ButtonType.whatsapp:
 
-        /// Return the whatsapp button color from ButtonColors.
-        return ButtonColors.whatsapp;
+        /// Return the whatsapp button color from buttonColors.
+        return buttonColors.whatsapp;
       case ButtonType.github:
 
-        /// Return the github button color from ButtonColors.
-        return ButtonColors.github;
+        /// Return the github button color from buttonColors.
+        return buttonColors.github;
       case ButtonType.phone:
 
-        /// Return the phone button color from ButtonColors.
-        return ButtonColors.phone;
+        /// Return the phone button color from buttonColors.
+        return buttonColors.phone;
       case ButtonType.instagram:
 
-        /// Return the instagram button color from ButtonColors.
-        return ButtonColors.instagram;
+        /// Return the instagram button color from buttonColors.
+        return buttonColors.instagram;
       case ButtonType.snapchat:
 
-        /// Return the snapchat button color from ButtonColors.
-        return ButtonColors.snapchat;
+        /// Return the snapchat button color from buttonColors.
+        return buttonColors.snapchat;
       case ButtonType.pinterest:
 
-        /// Return the pinterest button color from ButtonColors.
-        return ButtonColors.pinterest;
+        /// Return the pinterest button color from buttonColors.
+        return buttonColors.pinterest;
       case ButtonType.tiktok:
 
-        /// Return the tiktok button color from ButtonColors.
-        return ButtonColors.tiktok;
+        /// Return the tiktok button color from buttonColors.
+        return buttonColors.tiktok;
       case ButtonType.reddit:
 
-        /// Return the reddit button color from ButtonColors.
-        return ButtonColors.reddit;
+        /// Return the reddit button color from buttonColors.
+        return buttonColors.reddit;
       case ButtonType.discord:
 
-        /// Return the discord button color from ButtonColors.
-        return ButtonColors.discord;
+        /// Return the discord button color from buttonColors.
+        return buttonColors.discord;
       case ButtonType.wechat:
 
-        /// Return the wechat button color from ButtonColors.
-        return ButtonColors.wechat;
+        /// Return the wechat button color from buttonColors.
+        return buttonColors.wechat;
       case ButtonType.line:
 
-        /// Return the line button color from ButtonColors.
-        return ButtonColors.line;
+        /// Return the line button color from buttonColors.
+        return buttonColors.line;
       case ButtonType.quora:
 
-        /// Return the quora button color from ButtonColors.
-        return ButtonColors.quora;
+        /// Return the quora button color from buttonColors.
+        return buttonColors.quora;
       case ButtonType.twitch:
 
-        /// Return the twitch button color from ButtonColors.
-        return ButtonColors.twitch;
+        /// Return the twitch button color from buttonColors.
+        return buttonColors.twitch;
       case ButtonType.flickr:
 
-        /// Return the flickr button color from ButtonColors.
-        return ButtonColors.flickr;
+        /// Return the flickr button color from buttonColors.
+        return buttonColors.flickr;
       case ButtonType.spotify:
 
-        /// Return the spotify button color from ButtonColors.
-        return ButtonColors.spotify;
+        /// Return the spotify button color from buttonColors.
+        return buttonColors.spotify;
       case ButtonType.youtube:
 
-        /// Return the youtube button color from ButtonColors.
-        return ButtonColors.youtube;
+        /// Return the youtube button color from buttonColors.
+        return buttonColors.youtube;
       case ButtonType.tumblr:
 
-        /// Return the tumblr button color from ButtonColors.
-        return ButtonColors.tumblr;
+        /// Return the tumblr button color from buttonColors.
+        return buttonColors.tumblr;
       case ButtonType.skype:
 
-        /// Return the skype button color from ButtonColors.
-        return ButtonColors.skype;
+        /// Return the skype button color from buttonColors.
+        return buttonColors.skype;
       case ButtonType.viber:
 
-        /// Return the viber button color from ButtonColors.
-        return ButtonColors.viber;
+        /// Return the viber button color from buttonColors.
+        return buttonColors.viber;
       case ButtonType.yelp:
 
-        /// Return the yelp button color from ButtonColors.
-        return ButtonColors.yelp;
+        /// Return the yelp button color from buttonColors.
+        return buttonColors.yelp;
       case ButtonType.website:
 
-        /// Return the website button color from ButtonColors.
-        return ButtonColors.website;
+        /// Return the website button color from buttonColors.
+        return buttonColors.website;
       default:
 
         /// Return a default color if no matching button type is found.
-        return ButtonColors.defaultColor;
+        return buttonColors.defaultColor;
     }
   }
 
