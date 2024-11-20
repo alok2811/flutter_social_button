@@ -49,16 +49,11 @@ class SocialButton extends StatelessWidget {
 
   // Constructor to initialize the button properties
   const SocialButton({
-    Key? key,
-    required this.onTap,
+    required this.onTap, /// Callback for tap action
+    required this.icon, /// Icon widget for the button
+    required this.mini, required this.buttonColor, required this.label, super.key,
 
-    /// Callback for tap action
-    required this.icon,
-
-    /// Icon widget for the button
-    required this.buttonColor, // Background color
-    required this.label,
-    required this.mini,
+    /// Background color, required this.label, Key? key,, required this.label, super.key,
 
     /// Label text
     this.titleStyle,
@@ -94,7 +89,7 @@ class SocialButton extends StatelessWidget {
     this.buttonStyle = CustomButtonStyle.square,
 
     /// Default button style is square
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -113,7 +108,7 @@ class SocialButton extends StatelessWidget {
         padding: padding ??
             const EdgeInsets.symmetric(
                 horizontal: 16,
-                vertical: 12), // Default padding if none provided
+                vertical: 12,), // Default padding if none provided
         decoration: BoxDecoration(
           /// Custom button styling
           color: buttonColor,
@@ -140,7 +135,7 @@ class SocialButton extends StatelessWidget {
               : BoxShape.rectangle,
 
           /// Default to rectangle for square button
-          boxShadow: [
+          boxShadow: <BoxShadow>[
             if (elevation != 0.0)
 
               /// Adds shadow if elevation is not zero
@@ -161,7 +156,7 @@ class SocialButton extends StatelessWidget {
                   /// Displays icon and label for square button
                   mainAxisSize:
                       MainAxisSize.min, // Minimize row size to fit content
-                  children: [
+                  children: <Widget>[
                     icon,
 
                     /// Display the icon
@@ -170,13 +165,13 @@ class SocialButton extends StatelessWidget {
                       /// Conditionally display label based on the showLabel flag
                       Padding(
                         padding: const EdgeInsets.only(
-                            left: 8.0), // Add space between icon and label
+                            left: 8.0,), // Add space between icon and label
                         child: Text(
                           label,
 
                           /// Text to be displayed
                           style: titleStyle ??
-                              TextStyle(
+                              const TextStyle(
                                 fontSize: 16,
                                 fontWeight: FontWeight.w600,
                                 color: Colors

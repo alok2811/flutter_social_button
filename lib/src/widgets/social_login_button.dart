@@ -55,8 +55,7 @@ class FlutterSocialButton extends StatelessWidget {
   final CustomButtonStyle buttonStyle;
 
   const FlutterSocialButton({
-    Key? key,
-    required this.onTap,
+    required this.onTap, super.key,
     this.buttonType = ButtonType.email,
     this.iconColor = Colors.white,
     this.title,
@@ -74,7 +73,7 @@ class FlutterSocialButton extends StatelessWidget {
     this.elevation = 2.0,
     this.borderColor,
     this.borderWidth = 0.0,
-  }) : super(key: key);
+  });
 
   /// A utility function to retrieve the color by ButtonType
   /// A method to return a color based on the button type.
@@ -282,7 +281,7 @@ class FlutterSocialButton extends StatelessWidget {
         /// Return the Reddit icon from FontAwesome with the specified color and size.
         return customIcon ??
             Icon(FontAwesomeIcons.redditAlien,
-                color: iconColor, size: iconSize);
+                color: iconColor, size: iconSize,);
       case ButtonType.tumblr:
 
         /// Return the Tumblr icon from FontAwesome with the specified color and size.
@@ -352,8 +351,7 @@ class FlutterSocialButton extends StatelessWidget {
   }
 
   @override
-  Widget build(BuildContext context) {
-    return SocialButton(
+  Widget build(BuildContext context) => SocialButton(
       onTap: onTap,
       icon: _getIcon(),
       buttonColor: customButtonColor ?? _getColor(),
@@ -371,5 +369,4 @@ class FlutterSocialButton extends StatelessWidget {
       height: height,
       buttonStyle: buttonStyle,
     );
-  }
 }
